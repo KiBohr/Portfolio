@@ -14,7 +14,7 @@ function App() {
   )
 
   return (
-    <main>
+    <main className="p-5 text-red bg-beige font-[TiltNeon]">
       <RouterProvider router={router}/>
     </main>
   )

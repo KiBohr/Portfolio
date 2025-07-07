@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+    /* colors: */
+      --color-red:#B42B0C;
+      --color-periwinkel:#8092FB;
+      --color-green: #C3CE72;
+      --color-beige: #FFF3DB;
+      --color-sand: #E6C980;
+      
+    }
+    
+    @font-face {
+      font-family: ReScript;
+      font-style: normal;
+      font-weight: 200 700;
+      src: url("../src/assets/fonts/RedactedScript-Regular.ttf") format("woff2");
+    }
+    @font-face {
+      font-family: Squada;
+      font-style: normal;
+      font-weight: 200 700;
+      src: url("../src/assets/fonts/SquadaOne-Regular.ttf") format("woff2");
+    }
+    @font-face {
+      font-family: TiltNeon;
+      font-style: normal;
+      font-weight: 200 700;
+      src: url("../src/assets/fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf") format("woff2");
+    }
+  
