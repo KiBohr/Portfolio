@@ -7,6 +7,7 @@ import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
 import Contact from "./page/contact/contact"
 
+
 function App() {
 
   const router = createBrowserRouter(

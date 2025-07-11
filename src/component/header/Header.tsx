@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return ( 
         <header className="flex items-center justify-between gap-4 m-3 mb-5">
-            <Link to="/">
-            <img src="/src/assets/img/logo1.svg" alt="logo KB" />
+            <Link 
+            to="/">
+            <img 
+            className="h-8 md:h-10 lg:h-15 hover:scale-110 transition-all duration-300"
+            src="/src/assets/img/logo1.svg" 
+            alt="logo KB" />
             </Link>
 
 
