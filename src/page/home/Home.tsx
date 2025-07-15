@@ -12,12 +12,41 @@ const Home = () => {
             />
             
             <div
-            className="break-words text-center uppercase flex flex-col gap-2 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">   
-                <Link className="cursor-pointer hover:scale-110 transition-all duration-300" to="aboutMe">About Me</Link>
-                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="skills&tech">Skills & Tech</Link>
-                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="exp&edu">Experience & Education</Link>
-                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="projects">Projects</Link>
-                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="contact">Contact</Link>
+            className="break-words text-center uppercase flex flex-col gap-3 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">   
+                <Link className="cursor-pointer hover:scale-110 transition-all duration-300" to="aboutMe">
+                    <img 
+                        src="/src/assets/img/aboutMe.svg" 
+                        alt="about me"
+                        className="h-12 md:h-15" />
+                </Link>
+                        
+                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="skills&tech">
+                <img 
+                        src="/src/assets/img/skills&tech.svg" 
+                        alt="skills&tech"
+                        className="h-12 md:h-15" />
+                </Link>
+
+                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="exp&edu">
+                <img 
+                        src="/src/assets/img/Ex&Ed.svg" 
+                        alt="about me"
+                        className="h-19 md:h-25" />
+                </Link>
+
+                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="projects">
+                <img 
+                        src="/src/assets/img/projects.svg" 
+                        alt="about me"
+                        className="h-12 md:h-15" />
+                </Link>
+
+                <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="contact">
+                <img 
+                        src="/src/assets/img/Contact.svg" 
+                        alt="about me"
+                        className="h-12 md:h-15" />
+                </Link>
             </div>
         </section>
         
