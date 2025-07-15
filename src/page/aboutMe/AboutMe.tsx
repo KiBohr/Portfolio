@@ -3,9 +3,10 @@ const AboutMe = () => {
     return ( 
         <section className="p-5 flex flex-col items-center gap-5 md:mx-10">
             
-            <h1 
-            className="text-6xl md:mb-10 md:text-7xl"
-            >About Me</h1>
+            <img 
+            src="/src/assets/img/aboutMe.svg" 
+            alt="about me"
+            className="h-20 md:mb-8" />
 
             <div className="flex flex-col-reverse items-center justify-center gap-5 md:gap-20 md:flex-row md:justify-start md:text-start">
 

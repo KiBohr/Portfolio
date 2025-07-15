@@ -11,7 +11,7 @@
   overflow: hidden;
 
   background: linear-gradient(120deg,
-    var(--color-white) 0%,
+    var(--color-green) 0%,
     var(--color-beige) 40%,
     var(--color-white) 80%,
     var(--color-beige) 100%

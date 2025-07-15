@@ -5,7 +5,10 @@ import LinkButton from "../../component/linkButton/LinkButton";
 const Contact = () => {
     return ( 
         <section className="flex flex-col gap-3 items-center justify-center mt-10 w-full">
-            <h1 className="uppercase text-7xl">Contact</h1>
+            <img 
+            src="/src/assets/img/Contact.svg" 
+            alt="contact"
+            className="h-20" />
             
             <p className="text-lg mb-15">Ich freue mich auf Deine Nachricht!</p>
 
