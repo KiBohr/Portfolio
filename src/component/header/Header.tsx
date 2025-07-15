@@ -15,13 +15,13 @@ const Header = () => {
             <div className="flex items-center gap-2 justify-center">
                  {/*  component for dark light mode */}
             <img 
-            className=" h-5 block md:hidden hover:scale-110 transition-all duration-300" 
+            className="cursor-pointer h-5 block md:hidden hover:scale-110 transition-all duration-300" 
             src="/src/assets/img/lightMode.svg" 
             alt="doodle of a moon, dark/light mode" />
 
             {/*  component for language change */}
             <img 
-            className="h-5 block md:hidden hover:scale-110 transition-all duration-300" 
+            className="cursor-pointer h-5 block md:hidden hover:scale-110 transition-all duration-300" 
             src="/src/assets/img/language.svg" 
             alt="DE, button to change languages" />
             </div>
