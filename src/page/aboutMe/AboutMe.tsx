@@ -1,13 +1,17 @@
+
 const AboutMe = () => {
     return ( 
-        <section className=" p-5 flex flex-col items-center gap-5">
+        <section className="p-5 flex flex-col items-center gap-5 flex-grow">
             
-            <h1 className="text-4xl">About Me</h1>
+            <h1 
+            className="text-6xl md:mb-10 md:text-7xl"
+            >About Me</h1>
 
-            <div className="flex flex-col-reverse items-centerjustify-center gap-5 ">
+            <div className="flex flex-col-reverse items-center justify-center gap-5 md:gap-20 md:flex-row md:justify-start md:text-start">
+
                 <div 
-                className=" flex flex-col items-center text-center gap-2 text-red/80">
-                    <p className="text-md">Moin,
+                className="text-sm flex flex-col items-center text-center md:text-start gap-2 text-red/80 md:w-1/2">
+                    <p className="text-red text-start">Moin,
                         ich freue mich über den Besuch auf meiner Seite :)
                     </p>
                     <p>
@@ -26,7 +30,7 @@ const AboutMe = () => {
                 <img 
                 src="/src/assets/img/about.jpg" 
                 alt="a picture of me"
-                className="h-80 rounded-xl" 
+                className="w-1/2 rounded-xl md:w-1/3" 
                 />
             </div>
            
