@@ -1,6 +1,6 @@
 const Footer = () => {
     return ( 
-        <div className="mt-auto flex items-center justify-start gap-4 m-3">
+        <div className="mt-auto flex items-center justify-end gap-4 m-3">
               {/*  component for dark light mode */}
             <img 
             className="hidden cursor-pointer hover:scale-110 transition-all duration-300 md:block md:h-8 lg:h-10" 

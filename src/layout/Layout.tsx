@@ -9,8 +9,6 @@ const Layout = () => {
             <Outlet/>
             <Footer/>
         </div>
-        
-        
      );
 }
  

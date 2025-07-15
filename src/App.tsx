@@ -5,7 +5,8 @@ import AboutMe from "./page/aboutMe/AboutMe"
 import SkillsTech from "./page/skillsTech/SkillsTech"
 import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
-import Contact from "./page/contact/contact"
+import Contact from "./page/contact/Contact"
+
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
   )
 
   return (
-    <main className="p-5 text-red bg-beige font-[TiltNeon]">
+    <main className="p-7 text-red bg-beige font-[TiltNeon]">
       <RouterProvider router={router}/>
     </main>
   )
