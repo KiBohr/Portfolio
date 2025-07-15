@@ -6,6 +6,7 @@ import SkillsTech from "./page/skillsTech/SkillsTech"
 import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
 import Contact from "./page/contact/Contact"
+import "./bg.css"
 
 
 
@@ -26,7 +27,7 @@ function App() {
   )
 
   return (
-    <main className="p-7 text-red bg-beige font-[TiltNeon]">
+    <main className="p-7 text-red bg-beige font-[TiltNeon] animated-bg relative z-10">
       <RouterProvider router={router}/>
     </main>
   )
