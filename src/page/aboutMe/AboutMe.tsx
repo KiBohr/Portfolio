@@ -1,7 +1,7 @@
 
 const AboutMe = () => {
     return ( 
-        <section className="p-5 flex flex-col items-center gap-5 flex-grow">
+        <section className="p-5 flex flex-col items-center gap-5 md:mx-10">
             
             <h1 
             className="text-6xl md:mb-10 md:text-7xl"
@@ -30,7 +30,7 @@ const AboutMe = () => {
                 <img 
                 src="/src/assets/img/about.jpg" 
                 alt="a picture of me"
-                className="w-1/2 rounded-xl md:w-1/3" 
+                className="w-1/2 rounded-xl md:w-1/4 lg:w-1/5" 
                 />
             </div>
            

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return ( 
-        <header className="flex items-center justify-between gap-4 mx-2 mb-10 md:mx-5 md:mb-20">
+        <header className="flex items-center justify-between gap-4 mx-2 mb-5  md:mx-5 md:mb-10">
             <Link 
             to="/">
             <img 

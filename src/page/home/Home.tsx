@@ -6,7 +6,7 @@ const Home = () => {
         <section className="flex flex-col items-center justify-center gap-10 md:flex-row md:text-6xl md:gap-15 lg:text-8xl lg:gap-20 max-h-screen">
             
             <img
-            className="h-[40vh] rounded-4xl md:h-[60vh] lg:h-[80vh]" 
+            className="h-[40vh] rounded-4xl md:h-[60vh] lg:h-[70vh]" 
             src="/src/assets/img/platzhalterBild.svg" 
             alt="abstract" 
             />
