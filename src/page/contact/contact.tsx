@@ -10,7 +10,7 @@ const Contact = () => {
             alt="contact"
             className="h-20" />
             
-            <p className="text-lg mb-15">Ich freue mich auf Deine Nachricht!</p>
+            <p className="md:text-lg mb-15">Ich freue mich auf Deine Nachricht!</p>
 
             <div className="flex flex-col items-center gap-10 w-full bg-white/20 p-5 rounded-2xl md:w-1/2 lg:w-1/3 transition ease-in-out hover:bg-beige/50">
                 <Contacts 
