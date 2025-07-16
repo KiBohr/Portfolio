@@ -1,8 +1,18 @@
 import SkillsView from "../../component/skillsView/SkillsView";
+import {easeInOut, motion } from "motion/react";
 
 const SkillsTech = () => {
-    return ( 
-        <section className="flex flex-col items-center py-5">
+    return (
+        <motion.section
+        className="flex flex-col items-center py-5"
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{
+                duration:0.4,
+                ease: easeInOut,
+        }}
+        >
             <img 
                 src="/src/assets/img/skills&tech.svg" 
                  alt="skills&tech"
@@ -10,7 +20,8 @@ const SkillsTech = () => {
                 />
              <SkillsView/>
              <p className="text-[0.6rem]">drag skills if you like :)</p>
-        </section>
+        </motion.section>
+        
        
      );
 }

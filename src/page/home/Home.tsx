@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
+import { easeInOut, motion} from "motion/react";
 
 const Home = () => {
     return ( 
-       
-        <section className="flex flex-col items-center justify-center gap-10 md:flex-row md:text-6xl md:gap-15 lg:text-8xl lg:gap-20 max-h-screen">
-            
-            <img
+
+        <motion.section
+        className="flex flex-col items-center justify-center gap-10 md:flex-row md:text-6xl md:gap-15 lg:text-8xl lg:gap-20 max-h-screen"
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{
+                duration:0.4,
+                ease: easeInOut,
+        }}
+        >
+                <img
             className="h-[40vh] rounded-4xl md:h-[60vh] lg:h-[70vh]" 
             src="/src/assets/img/platzhalterBild.svg" 
             alt="abstract" 
@@ -48,8 +57,7 @@ const Home = () => {
                         className="h-12 md:h-15" />
                 </Link>
             </div>
-        </section>
-        
+        </motion.section>
      );
 }
  
