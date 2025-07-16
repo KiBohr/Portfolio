@@ -1,13 +1,26 @@
-import { motion } from "motion/react";
+import {easeInOut, motion } from "motion/react";
 
 const AboutMe = () => {
     return ( 
-        <section className="p-5 flex flex-col items-center gap-5 md:mx-10">
+        <motion.section
+        className="flex flex-col items-center"
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{
+                duration:0.4,
+                ease: easeInOut,
+        }}
+        >
             
-            <img 
+            <motion.img
             src="/src/assets/img/aboutMe.svg" 
             alt="about me"
-            className="h-20 md:mb-8" />
+            className="h-20 mb-5 md:mb-8"
+            >
+
+            </motion.img>
+        
 
              <motion.div
              className=" flex flex-col-reverse items-center justify-center gap-5 md:gap-20 md:flex-row md:justify-start md:text-start"
@@ -40,8 +53,8 @@ const AboutMe = () => {
                 className="w-1/3 rounded-xl " 
                 />
             </motion.div>
-        </section>
-       
+
+        </motion.section>
         
      );
 }
