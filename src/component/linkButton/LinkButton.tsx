@@ -7,7 +7,10 @@ interface LinkButtonProps {
 
 const LinkButton = ({link, src, alt, styling} : LinkButtonProps) => {
     return ( 
-        <a 
+        <a
+        // opens in new tab
+        target="_blank"
+        rel="noopener noreferrer"
         href={link}
         className="cursor-pointer hover:scale-110 transition-all duration-300">
                 <img
