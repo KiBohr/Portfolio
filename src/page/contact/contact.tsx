@@ -1,10 +1,21 @@
 import Contacts from "../../component/contacts/Contacts";
 import LinkButton from "../../component/linkButton/LinkButton";
+import { motion} from "motion/react";
 
 const Contact = () => {
     return ( 
-        <section className="flex flex-col gap-3 items-center justify-center mt-10 w-full">
-            <img 
+        <motion.section
+        className="flex flex-col gap-3 items-center justify-center mt-10 w-full"
+        initial={{ rotateY: 90, opacity: 0 }}
+      animate={{ rotateY: 0, opacity: 1 }}
+      exit={{ rotateY: -90, opacity: 0 }}
+      transition={{ duration: 0.9, ease: "easeInOut" }}
+      style={{
+        perspective: 1000,
+        width: "100%",
+        backfaceVisibility: "hidden" }}
+        >
+             <img 
             src="/src/assets/img/Contact.svg" 
             alt="contact"
             className="h-20" />
@@ -30,7 +41,9 @@ const Contact = () => {
                 styling="h-12"/>
                
             </div>
-        </section>
+        </motion.section>
+
+        
         
 
      );
