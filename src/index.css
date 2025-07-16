@@ -28,4 +28,10 @@
       font-weight: 200 700;
       src: url("../src/assets/fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf") format("woff2");
     }
+    @font-face {
+      font-family: AnPro;
+      font-style: normal;
+      font-weight: 200 700;
+      src: url("../src/assets/fonts/AnonymousPro-Regular.ttf") format("woff2");
+    }
   
