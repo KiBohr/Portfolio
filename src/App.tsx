@@ -27,7 +27,7 @@ function App() {
   )
 
   return (
-    <main className="min-h-screen w-screen h-screen  text-red bg-beige font-[Squada] animated-bg py-10 px-5">
+    <main className="min-h-screen w-screen h-screen  text-red bg-beige font-[AnPro] animated-bg py-10 px-5">
       <RouterProvider router={router}/>
     </main>
   )
