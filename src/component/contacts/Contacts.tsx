@@ -1,4 +1,5 @@
 import { motion} from "motion/react";
+import CopiedContent from "../copiedContent/CopiedContent";
 
 interface ContactsProps {
     img: string,
@@ -13,12 +14,15 @@ const Contacts = ({img, alt, text} : ContactsProps) => {
         className="flex items-center justify-between gap-2"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 1.1 }}
+        onClick={() => {
+            if (text) navigator.clipboard.writeText(text);
+          }}
         >
              <img 
             src={img} 
             alt={alt}
             className="h-8 cursor-pointer hover:scale-110 transition-all duration-300" />
-            <p>{text}</p>
+            <CopiedContent text={text}/>
         </motion.div>
      );
 }
