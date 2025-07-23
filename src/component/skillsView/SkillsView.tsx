@@ -3,20 +3,20 @@ import { motion, AnimatePresence } from "motion/react";
 
 // Beispiel-Array mit Images für Skills
 const initialSkills = [
-    { id: 1, src: "/src/assets/img/HTML5.svg", name: "HTML" },
-    { id: 2, src: "/src/assets/img/JavaScript.svg", name: "JavaScript" },
-    { id: 3, src: "/src/assets/img/TypeScript.svg", name: "Typescript" },
-    { id: 4, src: "/src/assets/img/React.svg", name: "React" },
-    { id: 5, src: "/src/assets/img/Next.js.svg", name: "next.js" },
-    { id: 6, src: "/src/assets/img/motion.svg", name: "motion" },
-    { id: 7, src: "/src/assets/img/Tailwind.svg", name: "Tailwind" },
-    { id: 8, src: "/src/assets/img/css3-plain.svg", name: "CSS" },
-    { id: 9, src: "/src/assets/img/sass.svg", name: "Sass" },
-    { id: 10, src: "/src/assets/img/nodejs.svg", name: "node.js" },
-    { id: 11, src: "/src/assets/img/Github.svg", name: "GitHub" },
-    { id: 12, src: "/src/assets/img/git.svg", name: "git" },
-    { id: 13, src: "/src/assets/img/Supabase.svg", name: "Supabase" },
-    { id: 14, src: "/src/assets/img/Figmaa.svg", name: "Figma" },
+    { id: 1, src: "/img/HTML5.svg", name: "HTML" },
+    { id: 2, src: "/img/JavaScript.svg", name: "JavaScript" },
+    { id: 3, src: "/img/TypeScript.svg", name: "Typescript" },
+    { id: 4, src: "/img/React.svg", name: "React" },
+    { id: 5, src: "/img/Next.js.svg", name: "next.js" },
+    { id: 6, src: "/img/motion.svg", name: "motion" },
+    { id: 7, src: "/img/Tailwind.svg", name: "Tailwind" },
+    { id: 8, src: "/img/css3-plain.svg", name: "CSS" },
+    { id: 9, src: "/img/sass.svg", name: "Sass" },
+    { id: 10, src: "/img/nodejs.svg", name: "node.js" },
+    { id: 11, src: "/img/Github.svg", name: "GitHub" },
+    { id: 12, src: "/img/git.svg", name: "git" },
+    { id: 13, src: "/img/Supabase.svg", name: "Supabase" },
+    { id: 14, src: "/img/Figmaa.svg", name: "Figma" },
 ];
 
 export default function SkillsView() {
