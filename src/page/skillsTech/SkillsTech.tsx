@@ -14,7 +14,7 @@ const SkillsTech = () => {
         }}
         >
             <img 
-                src="/src/assets/img/skills&tech.svg" 
+                src="/img/skills&tech.svg" 
                  alt="skills&tech"
                 className="h-14 md:h-15" 
                 />

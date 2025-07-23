@@ -15,24 +15,24 @@
       font-family: ReScript;
       font-style: normal;
       font-weight: 200 700;
-      src: url("../src/assets/fonts/RedactedScript-Regular.ttf") format("woff2");
+      src: url("/fonts/RedactedScript-Regular.ttf") format("woff2");
     }
     @font-face {
       font-family: Squada;
       font-style: normal;
       font-weight: 200 700;
-      src: url("../src/assets/fonts/SquadaOne-Regular.ttf") format("woff2");
+      src: url("/fonts/SquadaOne-Regular.ttf") format("woff2");
     }
     @font-face {
       font-family: TiltNeon;
       font-style: normal;
       font-weight: 200 700;
-      src: url("../src/assets/fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf") format("woff2");
+      src: url("/fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf") format("woff2");
     }
     @font-face {
       font-family: AnPro;
       font-style: normal;
       font-weight: 200 700;
-      src: url("../src/assets/fonts/AnonymousPro-Regular.ttf") format("woff2");
+      src: url("/fonts/AnonymousPro-Regular.ttf") format("woff2");
     }
   

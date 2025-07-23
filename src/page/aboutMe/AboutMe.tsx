@@ -14,7 +14,7 @@ const AboutMe = () => {
         >
             
             <motion.img
-            src="/src/assets/img/aboutMe.svg" 
+            src="/img/aboutMe.svg" 
             alt="about me"
             className="h-20 mb-5 md:mb-8"
             >
@@ -48,7 +48,7 @@ const AboutMe = () => {
                 </div>
 
                 <img 
-                src="/src/assets/img/about.jpg" 
+                src="/img/about.jpg" 
                 alt="a picture of me"
                 className="w-1/3 rounded-xl " 
                 />

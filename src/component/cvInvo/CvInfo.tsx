@@ -55,7 +55,7 @@ const CvInfo = ({date, title,companyLink, company, description, document, docume
                         >
                         <img 
                         className="h-3"
-                        src="/src/assets/img/collapsable.svg" alt="small arrow down" />
+                        src="/img/collapsable.svg" alt="small arrow down" />
                     </span>
 
                     </motion.button>
@@ -113,7 +113,7 @@ const CvInfo = ({date, title,companyLink, company, description, document, docume
                 >
                      <Link to="/projects">
                         <motion.img
-                        src="/src/assets/img/projects.svg"
+                        src="/img/projects.svg"
                         alt="education and experience"
                         className="h-8 m-5 md:mb-8"
                         whileHover={{ scale: 1.1 }}

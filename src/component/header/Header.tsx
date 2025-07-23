@@ -44,7 +44,7 @@ const Header = () => {
             <Link 
             to="/">
                 <motion.img
-                    src="/src/assets/img/logo1.svg"
+                    src="/img/logo1.svg"
                     alt="logo KB"
                     className="h-10"
                     initial={{ opacity: 0, scale:0 }}
@@ -67,7 +67,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 // downloads cv on click
                 download={true} 
-                href="/src/assets/pdfs/CV_deutsch_KatharinaBohr.pdf"
+                href="/pdfs/CV_deutsch_KatharinaBohr.pdf"
                 drag={isDraggable}
                 dragElastic={0.15}
                 animate={controls}
@@ -77,7 +77,7 @@ const Header = () => {
                 >
                 <motion.img
                     className="h-4 md:h-5 lg:h-6"
-                    src="/src/assets/img/cv.svg"
+                    src="/img/cv.svg"
                     alt="icon of a cv"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 1.4 }}
@@ -89,13 +89,13 @@ const Header = () => {
                 {/*  component for dark light mode */}
             <img 
             className="cursor-pointer h-5 md:h-6 lg:h-7 hover:scale-110 transition-all duration-300" 
-            src="/src/assets/img/lightMode.svg" 
+            src="/img/lightMode.svg" 
             alt="doodle of a moon, dark/light mode" />
 
             {/*  component for language change */}
             <img 
             className="cursor-pointer h-5 md:h-6 lg:h-7 hover:scale-110 transition-all duration-300" 
-            src="/src/assets/img/language.svg" 
+            src="/img/language.svg" 
             alt="DE, button to change languages" />
             </div>
         

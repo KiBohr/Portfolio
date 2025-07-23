@@ -13,7 +13,7 @@ const ExpEdu = () => {
                 ease: easeInOut,
         }}>
             <motion.img
-                src="/src/assets/img/Ex&Ed.svg" 
+                src="/img/Ex&Ed.svg" 
                 alt="education and experience"
                 className="h-20 md:h-25 mb-10 md:mb-20 "
             ></motion.img>
@@ -28,7 +28,7 @@ const ExpEdu = () => {
                     companyLink="https://www.super-code.de/" 
                     company="Supercode" 
                     description="Ich habe im Mai 25 meine Umschulung als Web Developer*in erfolgreich abschließen können. Dabei lag der Fokus auf Typescript und React." 
-                    document="/src/assets/pdfs/Katharina-Bohr_Certificate.pdf" 
+                    document="/pdfs/Katharina-Bohr_Certificate.pdf" 
                     documentTitle="Zertifikat" 
                 />
 

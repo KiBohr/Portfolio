@@ -18,11 +18,14 @@ const Contacts = ({img, alt, text} : ContactsProps) => {
             if (text) navigator.clipboard.writeText(text);
           }}
         >
-             <img 
-            src={img} 
-            alt={alt}
-            className="h-8 cursor-pointer hover:scale-110 transition-all duration-300" />
+            <img 
+                src={img} 
+                alt={alt}
+                className="h-8 cursor-pointer hover:scale-110 transition-all duration-300" 
+            />
+
             <CopiedContent text={text}/>
+            
         </motion.div>
      );
 }

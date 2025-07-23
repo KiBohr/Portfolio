@@ -13,7 +13,7 @@ const Projects = () => {
         }}
             className="flex flex-col items-center">
                 <motion.img
-                    src="/src/assets/img/projects.svg" 
+                    src="/img/projects.svg" 
                     alt="projects"
                     className="h-15 mb-15 md:h-20 md:mb-10"
                 />
@@ -23,31 +23,31 @@ const Projects = () => {
             className="carousel flex rounded-box w-60 md:w-150 ">
 
                 <ProjectView
-                    logo="/src/assets/img/vecipies_logo.svg"
+                    logo="/img/vecipies_logo.svg"
                     title="Vecipe"
                     description="Fullstack vegan recipe app"
                     info="Arbeit mit supabase"
                     linkText="to the app"
                     link="https://vecipe.vercel.app/"
-                    gif="/src/assets/gifs/screenrecort_vecipes.gif"
+                    gif="/gifs/screenrecort_vecipes.gif"
                 />
                 <ProjectView
-                    logo="/src/assets/img/pokemon_logo.svg"
+                    logo="/img/pokemon_logo.svg"
                     title="Pokemon-App"
                     description="Frontend pokemon App"
                     info="Arbeit mit PokeAPI"
                     linkText="to the app"
                     link="https://pokemon-api-sand.vercel.app/"
-                    gif="/src/assets/gifs/screenrecord_pokemon.gif"
+                    gif="/gifs/screenrecord_pokemon.gif"
                 />
                 <ProjectView
-                    logo="/src/assets/img/sparkle_logo.svg"
+                    logo="/img/sparkle_logo.svg"
                     title="Sparkle-App"
                     description="Fullstack social media App"
                     info="Abschlussprojekt der Umschulung"
                     linkText="to the app"
                     link="https://github.com/KiBohr/Sparkle-App"
-                    gif="/src/assets/gifs/screenrecord_sparkle.gif"
+                    gif="/gifs/screenrecord_sparkle.gif"
                 />
 
                 <ProjectView
@@ -55,12 +55,12 @@ const Projects = () => {
                 info="gibt es hier:"
                 linkText="zu meinem GitHub"
                 link="https://github.com/KiBohr"
-                gif="/src/assets/img/Github.svg"
+                gif="/img/Github.svg"
                               />
 
             </div>
             <motion.img
-                src="/src/assets/img/collapsable.svg"
+                src="/img/collapsable.svg"
                 className="h-4 md:h-7 rotate-270 opacity-50">
             </motion.img>
                 
