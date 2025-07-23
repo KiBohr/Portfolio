@@ -1,43 +1,73 @@
-import { motion } from "motion/react";
+import ProjectView from "@/component/projectView/ProjectView";
+import { easeInOut, motion } from "motion/react";
 
 const Projects = () => {
     return ( 
             <motion.section
+            initial={{opacity: 0}}
+            animate={{opacity:1}}
+            exit={{opacity:0}}
+            transition={{
+                duration:0.4,
+                ease: easeInOut,
+        }}
             className="flex flex-col items-center">
                 <motion.img
                     src="/src/assets/img/projects.svg" 
                     alt="projects"
                     className="h-15 mb-15 md:h-20 md:mb-10"
                 />
-                <motion.div className="flex flex-col md:flex-row-reverse md:items-start items-center gap-2">
-                    <div
-                    className="flex flex-col items-center md:items-start md:pt-2 md:pl-2">
-                        <h1 className="text-xl md:text-2xl">Sparkle-App</h1>
-                        <p className="text-[0.8rem] md:text-sm">fullstack social media App</p>
-                        <p className="text-[0.6rem] md:text-[0.8rem]">Abschlussprojekt der Umschulung </p>
-                        <a 
-                        className="hidden md:block pt-2 text-[0.8rem] underline"
-                        href="https://github.com/KiBohr/Sparkle-App"
-                         target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                            to the application
-                        </a>
-                    </div>
-                    
-                    <a
-                    href="https://github.com/KiBohr/Sparkle-App"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl">
-                        <motion.img
-                        src="/src/assets/gifs/screenrecord_sparkle.gif"
-                        className="h-100 rounded-3xl">
-                        </motion.img>
-                    </a>
-                </motion.div>
-               
+            
+            <div className="flex items-center justify-center">
+            <div
+            className="carousel flex rounded-box w-60 md:w-150 ">
 
+                <ProjectView
+                    logo="/src/assets/img/vecipies_logo.svg"
+                    title="Vecipe"
+                    description="Fullstack vegan recipe app"
+                    info="Arbeit mit supabase"
+                    linkText="to the app"
+                    link="https://vecipe.vercel.app/"
+                    gif="/src/assets/gifs/screenrecort_vecipes.gif"
+                />
+                <ProjectView
+                    logo="/src/assets/img/pokemon_logo.svg"
+                    title="Pokemon-App"
+                    description="Frontend pokemon App"
+                    info="Arbeit mit PokeAPI"
+                    linkText="to the app"
+                    link="https://pokemon-api-sand.vercel.app/"
+                    gif="/src/assets/gifs/screenrecord_pokemon.gif"
+                />
+                <ProjectView
+                    logo="/src/assets/img/sparkle_logo.svg"
+                    title="Sparkle-App"
+                    description="Fullstack social media App"
+                    info="Abschlussprojekt der Umschulung"
+                    linkText="to the app"
+                    link="https://github.com/KiBohr/Sparkle-App"
+                    gif="/src/assets/gifs/screenrecord_sparkle.gif"
+                />
+
+                <ProjectView
+                description="Weitere Projekte"
+                info="gibt es hier:"
+                linkText="zu meinem GitHub"
+                link="https://github.com/KiBohr"
+                gif="/src/assets/img/Github.svg"
+                              />
+
+            </div>
+            <motion.img
+                src="/src/assets/img/collapsable.svg"
+                className="h-4 md:h-7 rotate-270 opacity-50">
+            </motion.img>
+                
+            </div>
+
+            
+            
             </motion.section>
      );
 }
