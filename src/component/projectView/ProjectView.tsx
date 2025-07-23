@@ -2,22 +2,24 @@ import { motion } from "motion/react";
 
 interface ProjectViewProps{
     logo?: string,
+    alt: string,
     title?: string,
     description?: string,
     info?: string
     linkText?: string,
     link?: string,
     gif?: string,
+    altGif: string,
 }
 
-const ProjectView = ({logo, title, description, info,linkText, link, gif}:ProjectViewProps) => {
+const ProjectView = ({logo, alt, title, description, info,linkText, link, gif, altGif}:ProjectViewProps) => {
     return ( 
         <motion.div className="carousel-item w-full flex flex-col md:flex-row-reverse md:items-start items-center gap-2 cursor-all-scroll ">
 
                     <div
                     className="flex flex-col items-center md:items-start md:pt-2 md:pl-2">
                         <div className="flex items-center gap-2">
-                            <img className="h-6 md:h-7" src={logo}/>
+                            <img className="h-6 md:h-7" src={logo} alt={alt}/>
                             <h1 className="text-xl md:text-2xl">{title}</h1>
                         </div>
                         
@@ -44,6 +46,7 @@ const ProjectView = ({logo, title, description, info,linkText, link, gif}:Projec
                     className="rounded-xl">
                         <motion.img
                         src={gif}
+                        alt={altGif}
                         className="h-100 rounded-3xl hover:drop-shadow-2xl"
                         whileHover={{scale: 1.01}}>
                         </motion.img>
