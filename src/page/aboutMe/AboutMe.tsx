@@ -1,3 +1,4 @@
+import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import {easeInOut, motion } from "motion/react";
 
 const AboutMe = () => {
@@ -12,16 +13,13 @@ const AboutMe = () => {
                 ease: easeInOut,
         }}
         >
-            
-            <motion.img
-            src="/img/aboutMe.svg" 
-            alt="about me"
-            className="h-20 mb-5 md:mb-8"
-            >
-
-            </motion.img>
+            <HeaderTitle
+            src="/img/aboutMe.svg"
+            alt="handwritten 'about me'"
+            className="h-17 md:h-20 mb-8 md:mb-10"
+            />
         
-
+           
              <motion.div
              className=" flex flex-col-reverse items-center justify-center gap-5 md:gap-20 md:flex-row md:justify-start md:text-start"
             //  initial={{ opacity: 0, scale: 0.99 }}

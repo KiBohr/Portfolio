@@ -1,3 +1,4 @@
+import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import ProjectView from "@/component/projectView/ProjectView";
 import { easeInOut, motion } from "motion/react";
 
@@ -13,13 +14,13 @@ const Projects = () => {
         }}
             className="flex flex-col items-center">
 
-                <motion.img
-                    src="/img/projects.svg" 
-                    alt="projects"
-                    className="h-15 mb-1  md:h-20 "
-                />
+                <HeaderTitle
+                src="/img/projects.svg"
+                alt="handwritten 'projects'"
+                className="h-15 mb-1  md:h-20"/>
+               
                 <p
-                className="text-sm mb-15 md:mb-10">slide through my latest work</p>
+                className="text-[0.8rem] mb-15 md:mb-10">slide through my latest work</p>
             
             <div className="flex items-center justify-center">
             <div

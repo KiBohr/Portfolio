@@ -1,5 +1,6 @@
 import { easeInOut, motion } from "motion/react";
 import CvInfo from "../../component/cvInvo/CvInfo";
+import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 
 const ExpEdu = () => {
     return ( 
@@ -12,11 +13,12 @@ const ExpEdu = () => {
                 duration:0.4,
                 ease: easeInOut,
         }}>
-            <motion.img
-                src="/img/Ex&Ed.svg" 
-                alt="education and experience"
-                className="h-20 md:h-25 mb-10 md:mb-20 "
-            ></motion.img>
+
+            <HeaderTitle
+            src="/img/Ex&Ed.svg"
+            alt="handwritten 'experience & education'"
+            className="h-22 mb-10 md:h-30 md:mb-20"/>
+            
 
         <div className="flex flex-col md:flex-row items-center gap-5 justify-center md:gap-1 md:justify-between">
 

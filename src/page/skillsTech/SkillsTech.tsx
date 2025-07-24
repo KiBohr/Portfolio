@@ -1,3 +1,4 @@
+import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import SkillsView from "../../component/skillsView/SkillsView";
 import {easeInOut, motion } from "motion/react";
 
@@ -13,11 +14,11 @@ const SkillsTech = () => {
                 ease: easeInOut,
         }}
         >
-            <img 
-                src="/img/skills&tech.svg" 
-                 alt="skills&tech"
-                className="h-14 md:h-15" 
-                />
+            <HeaderTitle
+            src="/img/skills&tech.svg"
+            alt="handwirtten 'skills & tech'"
+            className="h-13 md:h-20"/>
+            
              <SkillsView/>
              <p className="text-[0.6rem]">drag skills if you like :)</p>
         </motion.section>
