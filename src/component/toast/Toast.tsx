@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 interface ToastProps {
   message: string;
@@ -6,19 +7,19 @@ interface ToastProps {
 }
 
 export default function Toast({ message, onClose }: ToastProps) {
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      onClose();
-    }, 2000); // auto-close after 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(onClose, 1500);
     return () => clearTimeout(timer);
   }, [onClose]);
 
-  return (
+  // Portal goes to <body>
+  return createPortal(
     <div
-      className=" text-sm fixed top-35 left-1/2 transform -translate-x-1/2 z-50"
+      className="text-sm text-green font-[AnPro] fixed top-70 md:top-75 left-1/2 transform -translate-x-1/2 z-50  pointer-events-none"
       role="alert"
     >
       {message}
-    </div>
+    </div>,
+    document.body
   );
 }
