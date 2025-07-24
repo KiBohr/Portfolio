@@ -14,7 +14,7 @@ function CopiedContent({text}: CopiedContentProps) {
       await navigator.clipboard.writeText(text || '');
       setCopied(true);
       setShowToast(true)
-      setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
+      setTimeout(() => setCopied(false), 1000); // Reset after 1.5 seconds
       console.log("email copied")
     } catch (err) {
       console.error('Copy failed', err);
