@@ -1,8 +1,51 @@
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
+import LinkButton from "@/component/linkButton/LinkButton";
 import ProjectView from "@/component/projectView/ProjectView";
 import { easeInOut, motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
 const Projects = () => {
+
+    const carouselRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState (false);
+
+    const checkScroll = () => {
+        const element = carouselRef.current;
+    if (!element) return;
+
+    setCanScrollLeft(element.scrollLeft > 0);
+
+    const scrolledToEnd = Math.abs(element.scrollWidth - element.clientWidth - element.scrollLeft) < 2;
+    setCanScrollRight(!scrolledToEnd)
+    }
+
+    useEffect(() => {
+        checkScroll()
+        const element = carouselRef.current;
+        if (element) {
+            element.addEventListener("scroll", checkScroll);
+            window.addEventListener("resize", checkScroll);
+            return () => {
+                element.removeEventListener("scroll", checkScroll);
+                window.removeEventListener("resize", checkScroll);
+            }
+        }
+    }, [])
+
+    // function for arrows
+    // left
+    const scrollLeft = () => {
+        if (!carouselRef.current) return;
+        carouselRef.current.scrollBy({ left: -200, behavior: "smooth"})
+    }
+    // right
+    const scrollRight = () => {
+        if (!carouselRef.current) return;
+        carouselRef.current.scrollBy({ left: 200, behavior: "smooth" });
+      };
+
+
     return ( 
             <motion.section
             initial={{opacity: 0}}
@@ -20,11 +63,46 @@ const Projects = () => {
                 className="h-15 mb-1  md:h-20"/>
                
                 <p
-                className="text-[0.8rem] mb-15 md:mb-10">slide through my latest work</p>
+                className="text-[0.8rem] mb-15 md:mb-10"
+                >slide through my latest work
+                </p>
             
             <div className="flex items-center justify-center">
+
+                {/* to keep the content centered - not the optimal solution */}
+            {!canScrollLeft && (
+                <button
+                className="opacity-0"
+                onClick={scrollRight}
+                aria-label="Scroll right"
+              >
+                <motion.img
+                    src="/img/collapsable.svg"
+                    alt="arrow to the right"
+                    >
+                </motion.img>
+              </button>
+            )}
+
+                {/* left arrow only shows, when you can scroll left */}
+                {canScrollLeft &&(
+                <button
+                    onClick={scrollLeft}
+                    aria-label="Scroll left"
+                    style={{ top: "50%", transform: "translateY(-50%)" }}
+                >
+                    <motion.img
+                        src="/img/collapsable.svg"
+                        alt="arrow to the right"
+                        className="h-4 md:h-7 rotate-90 opacity-50 hover:opacity-100 hover:scale-110 cursor-pointer">
+                    </motion.img>
+                </button>
+            )}
+            
+
             <div
-            className="carousel flex rounded-box w-60 md:w-150 ">
+            ref={carouselRef}
+            className= "carousel flex rounded-box w-60 md:w-150 " >
 
                 <ProjectView
                     logo="/img/vecipies_logo.svg"
@@ -60,26 +138,51 @@ const Projects = () => {
                     altGif="a short gif of the sparkle app"                
                     />
 
-                <ProjectView
-                alt="github logo"
-                description="Weitere Projekte"
-                info="gibt es hier:"
-                linkText="zu meinem GitHub"
-                link="https://github.com/KiBohr"
-                gif="/img/Github.svg"
-                altGif="github logo"
-                              />
-
-            </div>
-            <motion.img
-                src="/img/collapsable.svg"
-                className="h-4 md:h-7 rotate-270 opacity-50">
-            </motion.img>
+                <div
+                    className="carousel-item flex flex-col items-center w-full gap-2 mt-20 text-center text-red"
+                >
+                    <h1 className="text-xl md:text-2xl">Für weitere Projekte</h1>
+                    <p className="text-[0.8rem] md:text-sm">schau gern auf meinem GitHub vorbei:</p>
+                    <LinkButton
+                        link="https://github.com/KiBohr" 
+                        src="/img/Github.svg" 
+                        alt="logo of github"
+                        styling="h-20 hover:scale:110"
+                    />
+                </div>
                 
-            </div>
 
+            </div>
             
+            {canScrollRight && (
+                <button
+                onClick={scrollRight}
+                aria-label="Scroll right"
+                style={{ top: "50%", transform: "translateY(-50%)" }}
+              >
+                <motion.img
+                    src="/img/collapsable.svg"
+                    alt="arrow to the right"
+                    className="h-4 md:h-7 rotate-270 opacity-50 hover:opacity-100 hover:scale-110 cursor-pointer">
+                </motion.img>
+              </button>
+            )}
+            {/* to keep the content centered - not the optimal solution */}
+            {!canScrollRight && (
+                <button
+                className="opacity-0"
+                onClick={scrollRight}
+                aria-label="Scroll right"
+              >
+                <motion.img
+                    src="/img/collapsable.svg"
+                    alt="arrow to the right"
+                    >
+                </motion.img>
+              </button>
+            )}
             
+            </div>
             </motion.section>
      );
 }
