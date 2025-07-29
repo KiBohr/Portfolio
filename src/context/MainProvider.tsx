@@ -1,4 +1,4 @@
-1import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 interface MainContextProps {
   theme: "light" | "dark";
