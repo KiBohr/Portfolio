@@ -22,8 +22,6 @@ const AboutMe = () => {
            
              <motion.div
              className=" flex flex-col-reverse items-center justify-center gap-5 md:gap-20 md:flex-row md:justify-start md:text-start"
-            //  initial={{ opacity: 0, scale: 0.99 }}
-            //  animate={{ opacity: 1, scale: 1 }} 
              transition={{duration:0.8}}
              >
            
@@ -48,7 +46,7 @@ const AboutMe = () => {
                 <img 
                 src="/img/about.jpg" 
                 alt="a picture of me"
-                className="w-1/3 rounded-xl " 
+                className="w-2/5 max-w-xs md:w-1/3 rounded-xl" 
                 />
             </motion.div>
 
