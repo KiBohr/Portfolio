@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import ColorChange from "../colorChange/ColorChange";
 
 const Header = () => {
+
+    const location = useLocation()
+    const isHomePage : boolean = location.pathname === "/";
 
     // logic for dowdloading cv
     function handleDownLoad(e:React.MouseEvent<HTMLAnchorElement>) {
@@ -40,8 +44,9 @@ const Header = () => {
       
 
     return ( 
-        <header className="flex items-center justify-between gap-4 mx-2 mb-5  md:mx-5 md:mb-10">
-            <Link 
+        <header className="flex items-center justify-between gap-4 mx-2 mb-5  md:mx-5 md:mb-10 ">
+            {!isHomePage && (
+                <Link 
             to="/">
                 <motion.img
                     src="/img/logo1.svg"
@@ -55,9 +60,9 @@ const Header = () => {
                     >
                 </motion.img>
             </Link>
-
-
-
+            )}
+            
+           {/* change the postion of this */}
             <div className="flex items-center gap-3 justify-center">
                  
             {/* cv */}
@@ -85,12 +90,10 @@ const Header = () => {
                 />
             </motion.a>
                 
-
                 {/*  component for dark light mode */}
-            <img 
-            className="cursor-pointer h-5 md:h-6 lg:h-7 hover:scale-110 transition-all duration-300" 
-            src="/img/lightMode.svg" 
-            alt="doodle of a moon, dark/light mode" />
+            <ColorChange/>
+
+            
 
             {/*  component for language change */}
             <img 
@@ -98,7 +101,7 @@ const Header = () => {
             src="/img/language.svg" 
             alt="DE, button to change languages" />
             </div>
-        
+
         </header>
      );
 }
