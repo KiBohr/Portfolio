@@ -61,6 +61,24 @@ const ExpEdu = () => {
                 />
             </div>
         </div>    
+
+        
+            
+
+           <a 
+           target="_blank"
+           rel="noopener noreferrer"
+           href="/pdfs/CV_deutsch_KatharinaBohr.pdf"
+           className="text-sm mt-10 md:mt-15 flex flex-col items-center gap-1 transition ease-in-out hover:scale-110"
+           >
+                <img
+                className="h-4 md:h-5 lg:h-6"
+                src="/img/cv.svg"
+                alt="icon of a cv" />
+                
+                <p>mein lebenslauf</p>
+           </a>
+        
        </motion.section>
      );
 }
