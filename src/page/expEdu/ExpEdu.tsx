@@ -1,8 +1,10 @@
 import { easeInOut, motion } from "motion/react";
 import CvInfo from "../../component/cvInvo/CvInfo";
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
+import {useTranslation } from 'react-i18next'
 
 const ExpEdu = () => {
+    const { t } = useTranslation()
     return ( 
        <motion.section
        className="flex flex-col items-center"
@@ -26,20 +28,20 @@ const ExpEdu = () => {
             <div className="flex flex-col gap-5 items-center">
                 <CvInfo 
                     date="11.24 - 05.25" 
-                    title="Umschulung Web-Development" 
+                    title={t ("E&E1")} 
                     companyLink="https://www.super-code.de/" 
                     company="Supercode" 
-                    description="Ich habe im Mai 25 meine Umschulung als Web Developer*in erfolgreich abschließen können. Dabei lag der Fokus auf Typescript und React." 
+                    description={t ("E&E1_2")}
                     document="/pdfs/Katharina-Bohr_Certificate.pdf" 
-                    documentTitle="Zertifikat" 
+                    documentTitle={t("certificate")}
                 />
 
                 <CvInfo
                     date="2016 - 2020"
-                    title="Studium Logopädie"
+                    title={t ("speech_therapy")}
                     companyLink="https://www.hs-fresenius.de/?crmid=aCbGbAJcDaAaAaAaA&accountId=4081124337&campaignId=17428330071&adgroupId&creativeId&keywordId&gad_source=5&gad_campaignid=17428332954&gclid=EAIaIQobChMIhae977bGjgMVAf15BB3VWBeEEAAYASAAEgIKJPD_BwE"
                     company="Hochschule Fresenius"
-                    description="2020 habe ich meinen Bachelor of Science als akademische Sprachtherapeutin abgeschlossen."
+                    description={t ("st_desc")}
                 />
             </div>
 
@@ -50,13 +52,13 @@ const ExpEdu = () => {
             <div className="flex flex-col gap-5 items-center ">
             <CvInfo
                 date="2020-2023"
-                title="Arbeit als Logopädin"
-                description="Ich habe nach meinem Studium durch das Deutschlandstipendium zu meinem neuen Arbeitsplatz gefunden und als Logopä*in für knapp drei Jahre in einer Praxis in Hamburg gearbeitet."/>
+                title={t ("work_st")}
+                description={t ("work_st_desc")}/>
 
             <CvInfo
-                date="ab 01.09.2025"
-                title ="Ihr Unternehmen"
-                description="Kommen sie gerne auf mich zu! Schauen Sie sich gerne auch meine Projekte an."
+                date= {t ("start_date")}
+                title ={t ("advert")}
+                description={t ("advert_desc")}
                 hovered={true}
                 />
             </div>
@@ -76,7 +78,7 @@ const ExpEdu = () => {
                 src="/img/cv.svg"
                 alt="icon of a cv" />
                 
-                <p>Lebenslauf</p>
+                <p>{t ("cv_img")}</p>
            </a>
            <a 
            target="_blank"
@@ -89,7 +91,7 @@ const ExpEdu = () => {
                 src="/img/certificate.svg"
                 alt="icon of a cv" />
                 
-                <p>Zertifikat</p>
+                <p>{t ("certificate")}</p>
            </a>
 
         </div>
