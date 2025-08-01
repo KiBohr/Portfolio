@@ -40,7 +40,7 @@ const Home = () => {
                 <img 
                         src="/img/Ex&Ed.svg" 
                         alt="about me"
-                        className="h-20 md:h-28 lg:h-32" />
+                        className="h-20 md:h-28 lg:h-36" />
                 </Link>
 
                 <Link className="cursor-pointer hover:scale-110 transition-all duration-300"to="projects">
