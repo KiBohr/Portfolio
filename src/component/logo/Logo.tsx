@@ -1,0 +1,60 @@
+import { useState } from "react";
+import { motion } from "motion/react";
+
+const Logo = () => {
+     // Definierte Farben: Startfarbe + zwei Ziel-Farben
+  const colors = ["#C3CE72", "#B42B0C", "#8092FB"];
+  // Zustand für die aktuell angezeigte Farbe (startet mit Startfarbe)
+  const [colorIndex, setColorIndex] = useState(0);
+  // Steuert die Bounce-Animation
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+    // Wechsle auf nächste Farbe: abwechselnd 1 oder 2 (die Ziel-Farben)
+    setColorIndex((prev) => (prev === 1 ? 2 : 1));
+
+    // Nach Bounce-Dauer Wechsel zurück zur Startfarbe (#C3CE72)
+    setTimeout(() => {
+      setClicked(false);
+      setColorIndex(0);
+    }, 500); // Dauer passend zur Transition
+  };
+
+  return (
+    <motion.svg
+      onClick={handleClick}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 24"
+      fill="none"
+      className="h-60 md:h-90 cursor-pointer"
+      animate={{
+        y: clicked ? [0, -15, 0] : 0, // Bounce: Hochpoppen 15px und zurück
+      }}
+      transition={{
+        y: {
+          duration: 0.5,
+          ease: "easeInOut",
+        },
+      }}
+    >
+      <motion.path
+        d="M1.11557 1C1.14715 1.45821 1.17873 1.91641 1.15401 5.03165C1.12928 8.14689 1.0473 13.9053 0.96283 19.8382"
+        stroke={colors[colorIndex]} // Aktuelle Farbe (Start/Wechsel/Retour)
+        strokeWidth="1.40002"
+        strokeLinecap="round"
+        transition={{ duration: 0.4 }}
+      />
+      <motion.path
+        d="M1.79333 9.10238C2.63629 7.92933 4.46101 5.38523 4.79985 4.85538C5.17528 4.26831 6.36356 3.4645 7.29464 2.86803C7.82178 2.53033 8.64072 2.26763 9.49598 1.94937C10.6821 1.50798 12.0686 1.58524 13.3507 1.76373C14.757 1.95951 14.9695 3.06996 15.2743 3.62941C15.7056 4.42118 15.8725 5.42791 15.9326 6.161C15.9791 6.72817 15.2477 7.47141 14.6904 7.93651C14.1607 8.37857 12.8594 8.48738 11.8922 8.72931C11.5088 8.82521 10.9021 8.89111 10.3493 9.00475C9.25272 9.23019 13.8758 9.07356 15.1072 9.48403C16.0248 9.78992 16.9249 10.6503 17.3887 11.5168C18.044 12.7414 18.4201 14.7315 18.7774 16.9022C19.1946 19.4371 18.8192 21.0265 18.5402 21.3744C18.1033 21.9193 17.3018 22.284 16.0505 22.55C13.9385 22.9991 12.1045 22.6248 11.2183 22.398C10.3476 22.1751 9.02925 21.244 7.53002 20.1787C6.45914 19.4178 5.78716 18.5679 4.72444 17.0912C3.79185 15.7954 3.46305 14.7453 2.9298 13.8227C2.56368 13.2216 2.32369 12.5132 2.05062 11.4574C2.00635 11.1327 2.00635 10.7321 1.95804 10.271"
+        stroke={colors[colorIndex]} // Gleiche Farbe hier
+        strokeWidth="1.40002"
+        strokeLinecap="round"
+        transition={{ duration: 0.4 }}
+      />
+    </motion.svg>
+  );
+};
+
+ 
+export default Logo;

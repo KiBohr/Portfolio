@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
-import { easeInOut, motion} from "motion/react";
+import { easeInOut, LayoutGroup, motion} from "motion/react";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import Logo from "@/component/logo/Logo";
 
 const Home = () => {
         
         const { i18n } = useTranslation();
         const lang = i18n.language || 'en';
+
+        const [clicked, setClicked] = useState(false);
+        const handleClick = () => {
+                setClicked(true);
+            
+                // Animation nach ca. 500ms rücksetzen
+                setTimeout(() => setClicked(false), 500)
+        }
 
     return ( 
 
@@ -19,11 +29,9 @@ const Home = () => {
                 ease: easeInOut,
         }}
         >
-               <motion.img
-               src="/img/logo1.svg"
-               alt="an image of a K and a B melted together, the logo of this website"
-               className="h-60  md:h-90"
-               />
+               <Logo/>
+  
+
             
             <div
             className="break-words text-center uppercase flex flex-col gap-3 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">   
