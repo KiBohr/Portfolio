@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import ColorChange from "../colorChange/ColorChange";
+import LangToggle from "../langToggle/LangToggle";
+
 
 const Header = () => {
 
@@ -96,10 +98,8 @@ const Header = () => {
             
 
             {/*  component for language change */}
-            <img 
-            className="cursor-pointer h-5 md:h-6 lg:h-7 hover:scale-110 transition-all duration-300" 
-            src="/img/language.svg" 
-            alt="DE, button to change languages" />
+           <LangToggle/>
+           
             </div>
 
         </header>
