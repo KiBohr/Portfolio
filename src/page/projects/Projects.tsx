@@ -3,8 +3,11 @@ import LinkButton from "@/component/linkButton/LinkButton";
 import ProjectView from "@/component/projectView/ProjectView";
 import { easeInOut, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import {useTranslation } from 'react-i18next'
 
 const Projects = () => {
+
+    const {t} = useTranslation();
 
     const carouselRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -61,7 +64,7 @@ const Projects = () => {
                 src="/img/projects.svg"
                 alt="handwritten 'projects'"
                 className="h-15 mb-1  md:h-20"
-                desc="slide through my latest work"/>
+                desc={t("projects_title_desc")}/>
                
             
             <div className="flex items-center justify-center">
@@ -106,8 +109,8 @@ const Projects = () => {
                     alt="vecipies logo"
                     title="Vecipe"
                     description="Fullstack vegan recipe app"
-                    info="Arbeit mit supabase"
-                    linkText="to the app"
+                    info={t("p1_info")}
+                    linkText={ t ("link_text")}
                     link="https://vecipe.vercel.app/"
                     gif="/gifs/screenrecort_vecipes.gif"
                     altGif="short gif of the vevipe app"
@@ -117,8 +120,8 @@ const Projects = () => {
                     alt="picture of a masterball, the pokemon app logo"
                     title="Pokemon-App"
                     description="Frontend pokemon App"
-                    info="Arbeit mit PokeAPI"
-                    linkText="to the app"
+                    info= {t ("p2_info")}
+                    linkText={ t ("link_text")}
                     link="https://pokemon-api-sand.vercel.app/"
                     gif="/gifs/screenrecord_pokemon.gif"
                     altGif="short gif of the pokemon app"
@@ -128,7 +131,7 @@ const Projects = () => {
                     alt="sparkle logo, a green star with rounded edges"
                     title="Sparkle-App"
                     description="Fullstack social media App"
-                    info="Abschlussprojekt der Umschulung"
+                    info={t ("p3_info")}
                     linkText="to the app"
                     link="https://github.com/KiBohr/Sparkle-App"
                     gif="/gifs/screenrecord_sparkle.gif"
@@ -138,8 +141,8 @@ const Projects = () => {
                 <div
                     className="carousel-item flex flex-col items-center w-full gap-2 mt-20 text-center text-red"
                 >
-                    <h1 className="text-xl md:text-2xl">Für weitere Projekte</h1>
-                    <p className="text-[0.8rem] md:text-sm">schau gern auf meinem GitHub vorbei:</p>
+                    <h1 className="text-xl md:text-2xl">{t ("more_projects")}</h1>
+                    <p className="text-[0.8rem] md:text-sm">{t ("more_projects_1")}</p>
                     <LinkButton
                         link="https://github.com/KiBohr" 
                         src="/img/Github.svg" 
