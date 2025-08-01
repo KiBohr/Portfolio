@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface CvInfoProps {
-    date: string,
-    title: string,
+    date?: string,
+    title?: string,
     companyLink?: string,
     company?: string,
     description: string,
