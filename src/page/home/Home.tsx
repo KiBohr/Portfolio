@@ -17,7 +17,8 @@ const Home = () => {
                <motion.img
                src="/img/logo1.svg"
                alt="an image of a K and a B melted together, the logo of this website"
-               className="h-60  md:h-90 "/>
+               className="h-60  md:h-90"
+               />
             
             <div
             className="break-words text-center uppercase flex flex-col gap-3 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">   

@@ -20,7 +20,7 @@ const SkillsTech = () => {
             className="h-13 md:h-20"/>
             
              <SkillsView/>
-             <p className="text-[0.6rem]">drag skills if you like :)</p>
+             {/* <p className="text-[0.6rem]">drag skills if you like :)</p> */}
         </motion.section>
         
        

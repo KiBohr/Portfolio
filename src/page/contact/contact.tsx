@@ -19,10 +19,9 @@ const Contact = () => {
             <HeaderTitle
             src="/img/Contact.svg" 
             alt="contact"
-            className="h-18 md:h-20"/>
+            className="h-18 md:h-20"
+            desc="Komm gerne auf mich zu"/>
            
-            
-            <p className="md:text-lg mb-10  ">Komm gerne auf mich zu.</p>
 
             <div className="flex flex-col items-center bg-white/30 p-5 rounded-xl gap-10 max-w-xs mx-auto md:max-w-lg lg:max-w-2xl mb-5 hover:shadow-sm">
                 <Contacts 

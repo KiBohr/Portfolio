@@ -55,7 +55,7 @@ const ExpEdu = () => {
 
             <CvInfo
                 date="ab 01.09.2025"
-                title ="Hier könnte Ihr Unternehmensname stehen"
+                title ="Ihr Unternehmen"
                 description="Kommen sie gerne auf mich zu! Schauen Sie sich gerne auch meine Projekte an."
                 hovered={true}
                 />
@@ -64,8 +64,8 @@ const ExpEdu = () => {
 
         
             
-
-           <a 
+        <div className="flex items-center justify-center gap-5">
+        <a 
            target="_blank"
            rel="noopener noreferrer"
            href="/pdfs/CV_deutsch_KatharinaBohr.pdf"
@@ -76,8 +76,24 @@ const ExpEdu = () => {
                 src="/img/cv.svg"
                 alt="icon of a cv" />
                 
-                <p>mein lebenslauf</p>
+                <p>Lebenslauf</p>
            </a>
+           <a 
+           target="_blank"
+           rel="noopener noreferrer"
+           href="/public/pdfs/Katharina-Bohr_Certificate.pdf"
+           className="text-sm mt-10 md:mt-15 flex flex-col items-center gap-1 transition ease-in-out hover:scale-110"
+           >
+                <img
+                className="h-4 md:h-5 lg:h-6"
+                src="/img/certificate.svg"
+                alt="icon of a cv" />
+                
+                <p>Zertifikat</p>
+           </a>
+
+        </div>
+           
         
        </motion.section>
      );

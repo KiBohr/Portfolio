@@ -60,12 +60,9 @@ const Projects = () => {
                 <HeaderTitle
                 src="/img/projects.svg"
                 alt="handwritten 'projects'"
-                className="h-15 mb-1  md:h-20"/>
+                className="h-15 mb-1  md:h-20"
+                desc="slide through my latest work"/>
                
-                <p
-                className="text-[0.8rem] mb-15 md:mb-10"
-                >slide through my latest work
-                </p>
             
             <div className="flex items-center justify-center">
 
