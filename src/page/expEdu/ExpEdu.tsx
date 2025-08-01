@@ -4,7 +4,11 @@ import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import {useTranslation } from 'react-i18next'
 
 const ExpEdu = () => {
+
     const { t } = useTranslation()
+    const { i18n } = useTranslation();
+    const lang = i18n.language || 'en';
+
     return ( 
        <motion.section
        className="flex flex-col items-center"
@@ -17,7 +21,7 @@ const ExpEdu = () => {
         }}>
 
             <HeaderTitle
-            src="/img/Ex&Ed.svg"
+             src={`/img/Ex&Ed_${lang}.svg`}
             alt="handwritten 'experience & education'"
             className="h-22 mb-10 md:h-30 md:mb-20"/>
             

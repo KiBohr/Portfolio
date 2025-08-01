@@ -1,8 +1,13 @@
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import SkillsView from "../../component/skillsView/SkillsView";
 import {easeInOut, motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const SkillsTech = () => {
+
+    const { i18n } = useTranslation();
+    const lang = i18n.language || 'en';
+
     return (
         <motion.section
         className="flex flex-col items-center py-5"
@@ -15,7 +20,7 @@ const SkillsTech = () => {
         }}
         >
             <HeaderTitle
-            src="/img/skills&tech.svg"
+            src={`/img/skills&tech_${lang}.svg`}
             alt="handwirtten 'skills & tech'"
             className="h-13 md:h-20"/>
             

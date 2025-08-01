@@ -7,6 +7,8 @@ import {useTranslation } from 'react-i18next'
 const Contact = () => {
 
     const {t} = useTranslation()
+    const { i18n } = useTranslation();
+    const lang = i18n.language || 'en';
 
     return ( 
         <motion.section
@@ -21,7 +23,7 @@ const Contact = () => {
                 backfaceVisibility: "hidden" }}
         >
             <HeaderTitle
-            src="/img/Contact.svg" 
+            src={`/img/contact_${lang}.svg`} 
             alt="contact"
             className="h-18 md:h-20"
             desc={t ("contact")}/>

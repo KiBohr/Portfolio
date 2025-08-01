@@ -8,6 +8,8 @@ import {useTranslation } from 'react-i18next'
 const Projects = () => {
 
     const {t} = useTranslation();
+    const { i18n } = useTranslation();
+    const lang = i18n.language || 'en';
 
     const carouselRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -61,7 +63,7 @@ const Projects = () => {
             className="flex flex-col items-center">
 
                 <HeaderTitle
-                src="/img/projects.svg"
+                src={`/img/projects_${lang}.svg`}
                 alt="handwritten 'projects'"
                 className="h-15 mb-1  md:h-20"
                 desc={t("projects_title_desc")}/>

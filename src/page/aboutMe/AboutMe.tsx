@@ -4,6 +4,9 @@ import {Trans, useTranslation } from 'react-i18next'
 
 const AboutMe = () => {
     const { t } = useTranslation()
+    const { i18n } = useTranslation();
+    const lang = i18n.language || 'en';
+
 
     return ( 
         <motion.section
@@ -17,7 +20,7 @@ const AboutMe = () => {
         }}
         >
             <HeaderTitle
-            src="/img/aboutMe.svg"
+            src={`/img/aboutMe_${lang}.svg`}
             alt="handwritten 'about me'"
             className="h-17 md:h-20 mb-8 md:mb-10"
             />
