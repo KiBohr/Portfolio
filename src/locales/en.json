@@ -1,0 +1,46 @@
+{
+    "welcome_message": "Hello, happy to have you here :)",
+
+    "my_name": "My name is Katharina. I am turning 30 later this year and absolved my retraining as a <1>web developer</1> in may.",
+
+    "convictionText": "I am convinced that every skill can help solve problems in an <2>individual</2> way. My experience as a speech therapist initially seems unrelated to development but helps me with:",
+
+    "li_1": "organizing myself <3>independently</3> & productively",
+    "li_2": "working efficiently and purposefully in an interdisciplinary <4>team</4>",
+    "li_3": "and to be able to creatively <5>solve</5> different <5>problems</5> appropriately.",
+
+
+    "E&E1" : "Retraining Web Develoment",
+    "E&E1_2" : "I successfully completed my retraining as a web developer in May 2025, with a focus on TypeScript and React",
+    "certificate" : "Certificate",
+
+    "speech_therapy" : "Study of Speach Therapy",
+    "st_desc" :"In 2020 I completed my Bachelor of Science as a speech therapist.",
+
+    "work_st" : "Work as a speech therapist",
+    "work_st_desc" : "After my studies, I found my new job through a sholarshop and worked as a speech therapist in Hamburg for almost three years.",
+
+    "advert": "Your company",
+    "start_date" : "from 01.09.25",
+    "advert_desc" : "I would love to hear from you. Feel free to check out my projects as well.",
+
+    "cv_img" :"CV",
+
+    "projects_title_desc" : "slide through my latest work",
+
+    "p1_info" : "working with supabase",
+
+    "link_text" : "to the app",
+
+    "p2_info" : "working with pokemon API",
+
+    "p3_info" : "graduation project",
+
+    "more_projects" : "Looking for more?",
+    "more_projects_1" : "Check out my GitHub for more projects.",
+
+
+
+     "contact" : "Let´s connect!"
+}
+  

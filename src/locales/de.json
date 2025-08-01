@@ -1,0 +1,48 @@
+{
+    "welcome_message": "Moin, ich freue mich über den Besuch auf meiner Seite",
+
+     "my_name":  "Mein Name ist Katharina, ich werde dieses Jahr 30 und habe im Mai meine Umschulung als <1>Webdeveloper*in</1> abgeschlossen.",
+
+     "convictionText": "Ich bin davon überzeugt, dass jede Fähigkeit dabei unterstützen kann Probleme auf <2>individuelle</2> Art und Weise zu lösen. Meine Erfahrung als Logopäd*in hat im ersten Moment wenig mit dem Feld des Entwickelns zu tun, hilft mir aber dabei:",
+
+     "li_1": "mich produktiv <3>selbstständig</3> zu organisieren",
+     "li_2": "effizient und zielgerichtet in einem interdisziplinären <4>Team</4> zu arbeiten",
+     "li_3": "und kreativ immer unterschiedliche <5>Probleme</5> angepasst <5>lösen</5> zu können.",
+
+
+     "E&E1" : "Umschulung Web-Development",
+     "E&E1_2" : "Ich habe im Mai 25 meine Umschulung als Web Developer*in erfolgreich abschließen können. Dabei lag der Fokus auf Typescript und React.",
+     "certificate" : "Zertifikat",
+
+     "speech_therapy" : "Studium Logopädie",
+     "st_desc" : "2020 habe ich meinen Bachelor of Science als akademische Sprachtherapeutin abgeschlossen.",
+
+     "work_st" : "Arbeit als Logopädin",
+     "work_st_desc" : "Ich habe nach meinem Studium durch das Deutschlandstipendium zu meinem neuen Arbeitsplatz gefunden und als Logopä*in für knapp drei Jahre in einer Praxis in Hamburg gearbeitet.",
+
+     "advert" : "Ihr Unternehmen",
+     "start_date" : "ab 01.09.2025",
+     "advert_desc" : "Kommen sie gerne auf mich zu! Schauen Sie sich gerne auch meine Projekte an.",
+
+     "cv_img" : "Lebenslauf",
+
+
+     "projects_title_desc" : "Meine neuesten Projekte",
+
+     "p1_info" : "Arbeit mit supabase",
+
+     "link_text" : "zur app",
+
+     "p2_info" : "Arbeit mit PokeAPI",
+
+     "p3_info" : "Abschlussprojekt der Umschulung",
+ 
+     "more_projects:" : "Für weitere Projekte",
+     "more_projects_1" : "schau gern auf meinem GitHub vorbei:",
+
+
+     
+     "contact" :"Komm gerne auf mich zu"
+
+  }
+  
