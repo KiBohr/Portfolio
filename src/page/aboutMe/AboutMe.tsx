@@ -1,7 +1,10 @@
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import {easeInOut, motion } from "motion/react";
+import {Trans, useTranslation } from 'react-i18next'
 
 const AboutMe = () => {
+    const { t } = useTranslation()
+
     return ( 
         <motion.section
         className="flex flex-col items-center"
@@ -26,22 +29,40 @@ const AboutMe = () => {
              >
            
                 <div 
-                    className="bg-white/20 rounded-xl p-5 text-[0.7rem] flex flex-col items-center text-center md:text-start md:text-[0.8rem] lg:text-base gap-2 md:w-1/2">
-                        <p className=" text-sm md:text-lg md:text-start mb-2">Moin,
-                            ich freue mich über den Besuch auf meiner Seite :)
+                    className="bg-white/20 text-start rounded-xl p-5 text-[0.7rem] flex flex-col items-center  md:text-start md:text-[0.8rem] lg:text-base gap-2 md:w-1/2">
+                        <p className=" text-sm md:text-lg md:text-start mb-2">{t("welcome_message")}
                         </p>
+
                         <p>
-                            Mein Name ist Katharina, ich werde dieses Jahr 30 und habe im Mai meine Umschulung als <span className="animate-pulse duration-1000 transition ease-in-out">Webdeveloper*in</span> abgeschlossen. 
+                        <Trans i18nKey="my_name" components={{ 1: <span className="animate-pulse duration-1000 transition ease-in-out" /> }} />
                         </p>
+
                         <p>
-                        Ich bin davon überzeugt, dass jede Fähigkeit dabei unterstützen kann Probleme auf <span className="animate-pulse duration-1000 transition ease-in-out">individuelle</span>  Art und Weise zu lösen. Meine Erfahrung als Logopäd*in hat im ersten Moment wenig mit dem Feld des Entwickelns zu tun, hilft mir aber dabei:
+                        <Trans i18nKey="convictionText" components={{ 2: <span className="animate-pulse duration-1000 transition ease-in-out" /> }} />
                         </p>
                         
                         
                         <ul className="md:text-sm list-disc flex flex-col items-start px-4">
-                            <li>mich produktiv <span className="animate-pulse duration-1000 transition ease-in-out">selbstständig</span> zu organisieren</li>
-                            <li>effizient und zielgerichtet in einem interdisziplinären <span className="animate-pulse duration-1000 transition ease-in-out">Team</span> zu arbeiten</li>
-                            <li>und kreativ immer unterschiedliche <span className="animate-pulse duration-1000 transition ease-in-out">Probleme</span> angepasst <span className="animate-pulse duration-1000 transition ease-in-out">lösen</span> zu können.</li>
+                            <li>
+                                <Trans
+                                i18nKey="li_1"
+                                components={{ "3": <span className="animate-pulse duration-1000 transition ease-in-out" /> }}
+                                />
+                            </li>
+                            <li>
+                                <Trans
+                                i18nKey="li_2"
+                                components={{ "4": <span className="animate-pulse duration-1000 transition ease-in-out" /> }}
+                                />
+                            </li>
+                            <li>
+                                <Trans
+                                i18nKey="li_3"
+                                components={{ "5": <span className="animate-pulse duration-1000 transition ease-in-out" /> }}
+                                />
+                            </li>
+
+                            
                         </ul>
                 </div>
 
