@@ -2,8 +2,12 @@ import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import Contacts from "../../component/contacts/Contacts";
 import LinkButton from "../../component/linkButton/LinkButton";
 import { motion} from "motion/react";
+import {useTranslation } from 'react-i18next'
 
 const Contact = () => {
+
+    const {t} = useTranslation()
+
     return ( 
         <motion.section
             className="flex flex-col gap-3 items-center justify-center mt-10 w-full"
@@ -20,7 +24,7 @@ const Contact = () => {
             src="/img/Contact.svg" 
             alt="contact"
             className="h-18 md:h-20"
-            desc="Komm gerne auf mich zu"/>
+            desc={t ("contact")}/>
            
 
             <div className="flex flex-col items-center bg-white/30 p-5 rounded-xl gap-10 max-w-xs mx-auto md:max-w-lg lg:max-w-2xl mb-5 hover:shadow-sm">
