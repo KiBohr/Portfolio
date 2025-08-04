@@ -9,7 +9,7 @@ import SplashScreen from "@/component/splashScreen/SplashScreen";
 const Home = () => {
   const [loading, setLoading] = useState<boolean>(() => {
     // Prüfen, ob Splashscreen schon angezeigt wurde
-    const hasVisited = localStorage.getItem("hasVisited");
+    const hasVisited = sessionStorage.getItem("hasVisited");
     return !hasVisited; // Wenn nicht, dann true
   });
 
@@ -38,7 +38,7 @@ const Home = () => {
     if (loading) {
       const timer = setTimeout(() => {
         setLoading(false);
-        localStorage.setItem("hasVisited", "true");
+        sessionStorage.setItem("hasVisited", "true");
       }, 4000);
       return () => clearTimeout(timer);
     }
