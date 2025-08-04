@@ -28,7 +28,7 @@ const Home = () => {
             className="break-words text-center uppercase flex flex-col gap-3 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">   
                 <Link className="cursor-pointer hover:scale-110 transition-all duration-300" to="aboutMe">
                     <img 
-                        src={`/img/aboutMe_en.svg`}
+                        src={`/img/aboutMe_${lang}.svg`}
                         alt="about me"
                         className="h-10 md:h-16 lg:h-20" />
                 </Link>
