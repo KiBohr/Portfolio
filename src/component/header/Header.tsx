@@ -21,7 +21,7 @@ const Header = () => {
     // logic for draggable Cv icon
         const controls = useAnimation();
         const [isDraggable, setIsDraggable] = useState(false);
-        const timer = useRef<number | undefined>(undefined);
+        const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
       
         // after appearing it is draggable
         useEffect(() => {

@@ -14,7 +14,7 @@ function CopiedContent({text}: CopiedContentProps) {
       await navigator.clipboard.writeText(text || '');
       setCopied(true);
       setShowToast(true)
-      setTimeout(() => setCopied(false), 1000); // Reset after 1.5 seconds
+      setTimeout(() => setCopied(false), 1000); // Reset after 1 seconds
       console.log("email copied")
     } catch (err) {
       console.error('Copy failed', err);
@@ -28,7 +28,7 @@ function CopiedContent({text}: CopiedContentProps) {
         onClick={handleCopy}
         style={{ cursor: text ? "pointer" : "default", userSelect: "all" }}
         title="Click to copy"
-        className="font-mono"
+        className={`font-mono ${copied ? "text-green transition ease-in-out duration-100 " : ""}`}
       >
         {text || ""}
       </span>

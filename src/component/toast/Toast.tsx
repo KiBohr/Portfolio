@@ -8,7 +8,7 @@ interface ToastProps {
 
 export default function Toast({ message, onClose }: ToastProps) {
   useEffect(() => {
-    const timer = setTimeout(onClose, 1500);
+    const timer = setTimeout(onClose, 1000);
     return () => clearTimeout(timer);
   }, [onClose]);
 
