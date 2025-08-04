@@ -6,7 +6,7 @@ import SkillsTech from "./page/skillsTech/SkillsTech"
 import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
 import Contact from "./page/contact/Contact"
-import "./bg.css"
+
 
 
 
@@ -21,7 +21,6 @@ function App() {
         <Route path="exp&edu" element={<ExpEdu/>}/>
         <Route path="projects" element={<Projects/>}/>
         <Route path="contact" element={<Contact/>}/>
-
       </Route>
     )
   )
