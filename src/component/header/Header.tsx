@@ -92,8 +92,8 @@ const Header = () => {
                 />
             </motion.a>
                 
-                {/*  component for dark light mode */}
-            <ColorChange/>
+                {/*  component for dark light mode add again, when svgs work*/}
+            {/* <ColorChange/> */}
 
             
 

@@ -6,6 +6,7 @@ import SkillsTech from "./page/skillsTech/SkillsTech"
 import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
 import Contact from "./page/contact/Contact"
+import "./bg.css"
 
 
 
@@ -26,7 +27,7 @@ function App() {
   )
 
   return (
-    <main className="min-h-screen w-screen h-screen light:text-periwinkel text-red font-[AnPro] animated-bg dark:text-periwinkel py-10 px-5">
+    <main className="min-h-screen w-screen h-screen light:text-periwinkel text-red font-[AnPro] bg-beige dark:text-periwinkel py-10 px-5 animated-bg">
       <RouterProvider router={router}/>
     </main>
   )
