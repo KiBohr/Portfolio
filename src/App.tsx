@@ -6,7 +6,7 @@ import AboutMe from "./page/aboutMe/AboutMe"
 import SkillsTech from "./page/skillsTech/SkillsTech"
 import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
-import Contact from "./page/contact/Contact"
+import Connect from "./page/connect/Connect"
 
 
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="skills&tech" element={<SkillsTech/>}/>
         <Route path="exp&edu" element={<ExpEdu/>}/>
         <Route path="projects" element={<Projects/>}/>
-        <Route path="contact" element={<Contact/>}/>
+        <Route path="contact" element={<Connect}/>
       </Route>
     )
   )
