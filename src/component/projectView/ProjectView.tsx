@@ -47,7 +47,7 @@ const ProjectView = ({logo, alt, title, description, info,linkText, link, gif, a
                         <motion.img
                         src={gif}
                         alt={altGif}
-                        className="h-100 rounded-3xl hover:drop-shadow-2xl"
+                        className="h-100 md:h-115  rounded-3xl hover:drop-shadow-2xl"
                         whileHover={{scale: 1.01}}>
                         </motion.img>
                     </a>
