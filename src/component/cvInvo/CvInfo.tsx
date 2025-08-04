@@ -113,7 +113,7 @@ const CvInfo = ({date, title,companyLink, company, description, document, docume
                 >
                      <Link to="/projects">
                         <motion.img
-                        src="/img/projects.svg"
+                        src="/img/projects_en.svg"
                         alt="education and experience"
                         className="h-8 m-5 md:mb-8"
                         whileHover={{ scale: 1.1 }}

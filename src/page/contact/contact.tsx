@@ -29,7 +29,7 @@ const Contact = () => {
             desc={t ("contact")}/>
            
 
-            <div className="flex flex-col items-center bg-white/30 p-5 rounded-xl gap-10 max-w-xs mx-auto md:max-w-lg lg:max-w-2xl mb-5 hover:shadow-sm">
+            <div className="flex flex-col items-center bg-white/30 p-5 rounded-xl gap-10 max-w-xs mx-auto md:max-w-lg lg:max-w-2xl mb-5">
                 <Contacts 
                 img="/img/email.svg" 
                 alt="@ icon" 
