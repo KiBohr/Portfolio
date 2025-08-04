@@ -2,7 +2,7 @@ import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import useImagePreloader from "@/component/preloadImage/PreloadImage";
 import {easeInOut, motion } from "motion/react";
 import {Trans, useTranslation } from 'react-i18next'
-import Image from "next/image"
+
 
 const AboutMe = () => {
     const { t } = useTranslation()
@@ -83,12 +83,11 @@ const AboutMe = () => {
                         </ul>
                 </div>
 
-                <Image
+                <img
                 src="/img/about.jpg" 
                 alt="a picture of me"
                 className="w-2/5 max-w-xs md:w-1/3 rounded-xl"
-                placeholder = "blur"
-                priority
+                loading="lazy"
                 />
 
                 
