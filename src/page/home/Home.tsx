@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { easeInOut, LayoutGroup, motion} from "motion/react";
+import { easeInOut, motion} from "motion/react";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import Logo from "@/component/logo/Logo";
 
 const Home = () => {
@@ -9,13 +8,7 @@ const Home = () => {
         const { i18n } = useTranslation();
         const lang = i18n.language || 'en';
 
-        const [clicked, setClicked] = useState(false);
-        const handleClick = () => {
-                setClicked(true);
-            
-                // Animation nach ca. 500ms rücksetzen
-                setTimeout(() => setClicked(false), 500)
-        }
+        
 
     return ( 
 
@@ -30,9 +23,7 @@ const Home = () => {
         }}
         >
                <Logo/>
-  
 
-            
             <div
             className="break-words text-center uppercase flex flex-col gap-3 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">   
                 <Link className="cursor-pointer hover:scale-110 transition-all duration-300" to="aboutMe">
