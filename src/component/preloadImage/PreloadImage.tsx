@@ -1,16 +1,17 @@
-// to prevent images for titles to be not shown until languageToggle
-
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from "react";
 
 const preloadImage = (src: string): Promise<void> =>
   new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
-    img.onerror = () => reject();
+    img.onerror = () => reject(new Error(`Image failed to preload: ${src}`));
     img.src = src;
   });
 
 export default function useImagePreloader(imageList: string[]) {
+  // useMemo makes sure that imageList is stable and not rerendered everytime
+  const memoizedImageList = useMemo(() => imageList, [JSON.stringify(imageList)]);
+
   const [imagesPreloaded, setImagesPreloaded] = useState(false);
 
   useEffect(() => {
@@ -18,10 +19,18 @@ export default function useImagePreloader(imageList: string[]) {
 
     async function preloadAll() {
       try {
-        await Promise.all(imageList.map(preloadImage));
+        await Promise.all(
+          memoizedImageList.map((src) =>
+            preloadImage(src).catch((error) => {
+              console.error(error);
+              // Fehler ignorieren, um Ladefortschritt nicht zu blockieren
+            })
+          )
+        );
         if (!cancelled) setImagesPreloaded(true);
-      } catch {
-        if (!cancelled) setImagesPreloaded(true); // Fehler ignorieren, trotzdem weiter
+      } catch (error) {
+        if (!cancelled) setImagesPreloaded(true);
+        console.error("Unexpected error in image preloading:", error);
       }
     }
 
@@ -30,7 +39,7 @@ export default function useImagePreloader(imageList: string[]) {
     return () => {
       cancelled = true;
     };
-  }, [imageList]);
+  }, [memoizedImageList]);
 
   return imagesPreloaded;
 }
