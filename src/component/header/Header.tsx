@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import ColorChange from "../colorChange/ColorChange";
+// import ColorChange from "../colorChange/ColorChange"; add again when colorChange is working with svgs
 import LangToggle from "../langToggle/LangToggle";
 
 
