@@ -1,11 +1,10 @@
-import HeaderTitle from "@/component/headerTitle/HeaderTitle";
-import Contacts from "../../component/contacts/Contacts";
-import LinkButton from "../../component/linkButton/LinkButton";
+import Contacts from "@/component/contacts/Contacts";
+import LinkButton from "@/component/linkButton/LinkButton";
+import { useTranslation } from "react-i18next";
 import { motion} from "motion/react";
-import {useTranslation } from 'react-i18next'
+import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 
 const Contact = () => {
-
     const {t} = useTranslation()
     const { i18n } = useTranslation();
     const lang = i18n.language || 'en';
@@ -49,10 +48,6 @@ const Contact = () => {
                
             </div>
         </motion.section>
-
-        
-        
-
      );
 }
  
