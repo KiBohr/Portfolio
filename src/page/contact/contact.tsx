@@ -3,11 +3,23 @@ import LinkButton from "@/component/linkButton/LinkButton";
 import { useTranslation } from "react-i18next";
 import { motion} from "motion/react";
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
+import useImagePreloader from "@/component/preloadImage/PreloadImage";
 
 const Contact = () => {
     const {t} = useTranslation()
     const { i18n } = useTranslation();
     const lang = i18n.language || 'en';
+ 
+    
+    const imagesToPreload = [
+        "/img/contact_en.svg",
+        "/img/contact_de.svg",
+    ];
+
+    const imagesLoaded = useImagePreloader(imagesToPreload);
+
+    if (!imagesLoaded)
+        return <div className="text-center py-20">Loading handwritten titles, please wait...</div>;
 
     return ( 
         <motion.section

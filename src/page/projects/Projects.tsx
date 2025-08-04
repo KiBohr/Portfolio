@@ -1,5 +1,6 @@
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import LinkButton from "@/component/linkButton/LinkButton";
+import useImagePreloader from "@/component/preloadImage/PreloadImage";
 import ProjectView from "@/component/projectView/ProjectView";
 import { easeInOut, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
@@ -10,6 +11,19 @@ const Projects = () => {
     const {t} = useTranslation();
     const { i18n } = useTranslation();
     const lang = i18n.language || 'en';
+
+    //preloading images
+
+    const imagesToPreload = [
+        "/img/projects_en.svg",
+        "/img/projects_de.svg",
+      ];
+    
+      const imagesLoaded = useImagePreloader(imagesToPreload);
+    
+      // Optional: Ladezustand abfragen und Loader anzeigen
+      if (!imagesLoaded)
+        return <div className="text-center py-20">Loading handwritten title, please wait...</div>;
 
     const carouselRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);

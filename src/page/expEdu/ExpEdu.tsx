@@ -2,12 +2,26 @@ import { easeInOut, motion } from "motion/react";
 import CvInfo from "../../component/cvInvo/CvInfo";
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import {useTranslation } from 'react-i18next'
+import useImagePreloader from "@/component/preloadImage/PreloadImage";
 
 const ExpEdu = () => {
 
     const { t } = useTranslation()
     const { i18n } = useTranslation();
     const lang = i18n.language || 'en';
+
+    
+    const imagesToPreload = [
+        "/img/Ex&Ed_en.svg",
+        "/img/Ex&Ed_de.svg",
+        "/img/projects_en.svg",
+    ];
+
+    const imagesLoaded = useImagePreloader(imagesToPreload);
+
+    
+    if (!imagesLoaded)
+        return <div className="text-center py-20">Loading handwritten title, please wait...</div>;
 
     return ( 
        <motion.section

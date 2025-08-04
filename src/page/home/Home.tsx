@@ -2,12 +2,32 @@ import { Link } from "react-router-dom";
 import { easeInOut, motion} from "motion/react";
 import { useTranslation } from "react-i18next";
 import Logo from "@/component/logo/Logo";
+import useImagePreloader from "@/component/preloadImage/PreloadImage";
+
 
 const Home = () => {
         
         const { i18n } = useTranslation();
         const lang = i18n.language || 'en';
 
+        
+        const imagesToPreload = [
+                "/img/aboutMe_en.svg",
+                "/img/aboutMe_de.svg",
+                "/img/skills&tech_en.svg",
+                "/img/skills&tech_de.svg",
+                "/img/Ex&Ed_en.svg",
+                "/img/Ex&Ed_de.svg",
+                "/img/projects_en.svg",
+                "/img/projects_de.svg",
+                "/img/contact_en.svg",
+                "/img/contact_de.svg",
+        ];
+        
+        const imagesLoaded = useImagePreloader(imagesToPreload);
+        
+        if (!imagesLoaded)
+                return <div className="text-center py-20">Loading handwritten titles, please wait...</div>;
         
 
     return ( 
