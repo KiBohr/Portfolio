@@ -8,8 +8,7 @@ import {useTranslation } from 'react-i18next'
 
 const Projects = () => {
 
-    const {t} = useTranslation();
-    const { i18n } = useTranslation();
+    const {t, i18n } = useTranslation();
     const lang = i18n.language || 'en';
 
     //preloading images
