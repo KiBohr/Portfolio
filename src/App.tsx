@@ -10,7 +10,6 @@ import "./bg.css"
 
 
 
-
 function App() {
 
   const router = createBrowserRouter(
