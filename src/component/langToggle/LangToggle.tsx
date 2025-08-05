@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import useImagePreloader from '../preloadImage/PreloadImage';
+
 
 const LangToggle = () => {
     const { i18n } = useTranslation();
@@ -9,20 +9,7 @@ const LangToggle = () => {
     }
 
     const imgSrc = i18n.language === 'en' ? '/img/ToggleGerman.svg' : '/img/ToggleEnglish.svg';
-
     const imgAlt = i18n.language === 'en' ? 'german' : 'englisch';
-    
-    // preload img
-    const imagesToPreload = [
-        '/img/ToggleGerman.svg',
-        '/img/ToggleEnglish.svg',
-    ];
-
-    const imagesLoaded = useImagePreloader(imagesToPreload);
-
-    if (!imagesLoaded)
-        return <div className="text-center py-20">Loading handwritten titles, please wait...</div>;
-
     
     return ( 
         <button
