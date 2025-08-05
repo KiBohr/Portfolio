@@ -58,7 +58,7 @@ const Header = () => {
                 <motion.img
                     src="/img/logo1.svg"
                     alt="logo KB"
-                    className="h-10 cursor-click"
+                    className="h-14 cursor-click"
                     initial={{ opacity: 0, scale:0 }}
                     animate={{ opacity: 1, scale:1}}
                     transition={{ duration: 1, type: "spring" }}
@@ -88,7 +88,7 @@ const Header = () => {
                 style={{ display: "inline-block", cursor: isDraggable ? "grab" : "auto" }}
                 >
                 <motion.img
-                    className="h-4 md:h-5 lg:h-6 cursor-drag"
+                    className="h-8 cursor-drag"
                     src="/img/cv.svg"
                     alt="icon of a cv"
                     whileHover={{ scale: 1.2 }}

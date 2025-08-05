@@ -13,14 +13,14 @@ const LangToggle = () => {
     
     return ( 
         <button
-        className="cursor-click h-5 md:h-6 lg:h-7 hover:scale-110 transition-all duration-300" 
+        className="cursor-click hover:scale-110 transition-all duration-300" 
         onClick={toggleLanguage}
         aria-label='toggle language'>
             
             <img
                 src={imgSrc}
                 alt={imgAlt}
-                className="h-5 md:h-6 lg:h-7"
+                className="h-8"
             />
         </button>
      );
