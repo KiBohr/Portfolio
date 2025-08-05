@@ -38,7 +38,7 @@ const ExpEdu = () => {
                     companyLink="https://www.super-code.de/" 
                     company="Supercode" 
                     description={t ("E&E1_2")}
-                    document="/pdfs/Katharina-Bohr_Certificate.pdf" 
+                    document="/pdfs/KatharinaBohr_Certificate.pdf" 
                     documentTitle={t("certificate")}
                 />
 
@@ -89,7 +89,7 @@ const ExpEdu = () => {
            <a 
            target="_blank"
            rel="noopener noreferrer"
-           href="/pdfs/Katharina-Bohr_Certificate.pdf" 
+           href="/pdfs/KatharinaBohr_Certificate.pdf" 
            className="cursor-click text-sm mt-10 md:mt-15 flex flex-col items-center gap-1 transition ease-in-out hover:scale-110"
            >
                 <img
