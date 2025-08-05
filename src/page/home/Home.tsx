@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { easeInOut, motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import Logo from "@/component/logo/Logo";
-import useImagePreloader from "@/component/preloadImage/PreloadImage";
 import { useEffect, useState } from "react";
 import SplashScreen from "@/component/splashScreen/SplashScreen";
 
@@ -15,23 +14,8 @@ const Home = () => {
 
   // translation
   const { i18n } = useTranslation();
-  const lang = i18n.language || "en";
-
-  // preloading images
-  const imagesToPreload = [
-    "/img/aboutMe_en.svg",
-    "/img/aboutMe_de.svg",
-    "/img/skills&tech_en.svg",
-    "/img/skills&tech_de.svg",
-    "/img/Ex&Ed_en.svg",
-    "/img/Ex&Ed_de.svg",
-    "/img/projects_en.svg",
-    "/img/projects_de.svg",
-    "/img/contact_en.svg",
-    "/img/contact_de.svg",
-  ];
-
-  const imagesLoaded = useImagePreloader(imagesToPreload);
+  const lang = i18n.resolvedLanguage || "en"; // Instead of i18n.language, will make sure, that the language is always one of the supported languages or as default english
+  
 
   // Splashscreen Timer und localStorage setzen
   useEffect(() => {
@@ -43,9 +27,6 @@ const Home = () => {
       return () => clearTimeout(timer);
     }
   }, [loading]);
-
-  if (!imagesLoaded)
-    return <div className="text-center py-20">Loading handwritten titles...</div>;
 
   if (loading) {
     return <SplashScreen />;
