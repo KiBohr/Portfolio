@@ -7,7 +7,7 @@ import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 const Connect = () => {
     const {t} = useTranslation()
     const { i18n } = useTranslation();
-    const lang = i18n.language || 'en';
+    const lang = i18n.resolvedLanguage || "en";
 
     return ( 
         <motion.section

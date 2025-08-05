@@ -1,6 +1,5 @@
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import LinkButton from "@/component/linkButton/LinkButton";
-
 import ProjectView from "@/component/projectView/ProjectView";
 import { easeInOut, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
@@ -9,7 +8,7 @@ import {useTranslation } from 'react-i18next'
 const Projects = () => {
 
     const {t, i18n } = useTranslation();
-    const lang = i18n.language || 'en';
+    const lang = i18n.resolvedLanguage || "en";
 
     const carouselRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);

@@ -1,5 +1,4 @@
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
-import useImagePreloader from "@/component/preloadImage/PreloadImage";
 import {easeInOut, motion } from "motion/react";
 import {Trans, useTranslation } from 'react-i18next'
 
@@ -7,20 +6,8 @@ import {Trans, useTranslation } from 'react-i18next'
 const AboutMe = () => {
     const { t } = useTranslation()
     const { i18n } = useTranslation();
-    const lang = i18n.language || 'en';
-
-    //preloading images
-
-    const imagesToPreload = [
-        "/img/aboutMe_en.svg",
-        "/img/aboutMe_de.svg",
-      ];
+    const lang = i18n.resolvedLanguage || "en";
     
-      const imagesLoaded = useImagePreloader(imagesToPreload);
-    
-      // Optional: Ladezustand abfragen und Loader anzeigen
-      if (!imagesLoaded)
-        return <div className="text-center py-20">Loading handwritten title, please wait...</div>;
 
     return ( 
         <motion.section
