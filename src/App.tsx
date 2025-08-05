@@ -10,6 +10,7 @@ import Connect from "./page/connect/Connect"
 
 
 
+
 function App() {
 
   const router = createBrowserRouter(
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <main className="min-h-screen w-screen h-screen light:text-periwinkel text-red font-[AnPro] bg-beige dark:text-periwinkel py-10 px-5 animated-bg">
+      
       <RouterProvider router={router}/>
     </main>
   )

@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 // import ColorChange from "../colorChange/ColorChange"; add again when colorChange is working with svgs
 import LangToggle from "../langToggle/LangToggle";
+import { useTranslation } from "react-i18next";
 
 
 const Header = () => {
@@ -10,9 +11,13 @@ const Header = () => {
     const location = useLocation()
     const isHomePage : boolean = location.pathname === "/";
 
+    // translation
+    const { i18n, t } = useTranslation();
+    const lang = i18n.resolvedLanguage || "en";
+
     // logic for dowdloading cv
     function handleDownLoad(e:React.MouseEvent<HTMLAnchorElement>) {
-        const confirmed = window.confirm("Do you want to download my Cv?");
+        const confirmed = window.confirm(t("cv"));
         if (!confirmed) {
             e.preventDefault()
         }
@@ -53,7 +58,7 @@ const Header = () => {
                 <motion.img
                     src="/img/logo1.svg"
                     alt="logo KB"
-                    className="h-10"
+                    className="h-10 cursor-click"
                     initial={{ opacity: 0, scale:0 }}
                     animate={{ opacity: 1, scale:1}}
                     transition={{ duration: 1, type: "spring" }}
@@ -74,7 +79,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 // downloads cv on click
                 download={true} 
-                href="/pdfs/CV_deutsch_KatharinaBohr.pdf"
+                href={`/pdfs/CV_KatharinaBohr_${lang}.pdf`}
                 drag={isDraggable}
                 dragElastic={0.15}
                 animate={controls}
@@ -83,7 +88,7 @@ const Header = () => {
                 style={{ display: "inline-block", cursor: isDraggable ? "grab" : "auto" }}
                 >
                 <motion.img
-                    className="h-4 md:h-5 lg:h-6"
+                    className="h-4 md:h-5 lg:h-6 cursor-drag"
                     src="/img/cv.svg"
                     alt="icon of a cv"
                     whileHover={{ scale: 1.2 }}
@@ -96,12 +101,10 @@ const Header = () => {
             {/* <ColorChange/> */}
 
             
-
             {/*  component for language change */}
            <LangToggle/>
-           
+        
             </div>
-
         </header>
      );
 }

@@ -47,7 +47,7 @@ const Home = () => {
 
       <div className="break-words text-center uppercase flex flex-col gap-3 items-center justify-center text-4xl md:items-start md:text-5xl md:gap-6 md:text-start">
         <Link
-          className="cursor-pointer hover:scale-110 transition-all duration-300"
+          className="cursor-click hover:scale-110 transition-all duration-300"
           to="aboutMe"
         >
           <img
@@ -58,7 +58,7 @@ const Home = () => {
         </Link>
 
         <Link
-          className="cursor-pointer hover:scale-110 transition-all duration-300"
+          className="cursor-click hover:scale-110 transition-all duration-300"
           to="skills&tech"
         >
           <img
@@ -69,7 +69,7 @@ const Home = () => {
         </Link>
 
         <Link
-          className="cursor-pointer hover:scale-110 transition-all duration-300"
+          className="cursor-click hover:scale-110 transition-all duration-300"
           to="exp&edu"
         >
           <img
@@ -80,7 +80,7 @@ const Home = () => {
         </Link>
 
         <Link
-          className="cursor-pointer hover:scale-110 transition-all duration-300"
+          className="cursor-click hover:scale-110 transition-all duration-300"
           to="projects"
         >
           <img
@@ -91,7 +91,7 @@ const Home = () => {
         </Link>
 
         <Link
-          className="cursor-pointer hover:scale-110 transition-all duration-300"
+          className="cursor-click hover:scale-110 transition-all duration-300"
           to="contact"
         >
           <img

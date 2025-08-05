@@ -36,7 +36,7 @@ const Logo = () => {
         rotateY: rotation.rotateY,
       }}
       transition={springTransition}
-      className="cursor-pointer h-50 md:h-100"
+      className="cursor-pointer h-50 md:h-100 cursor-drag"
     >
       <path
         d="M1.24963 1C1.16725 1 1.08488 1 1.04244 4.78943C1 8.57886 1 16.1577 1 23.9663"

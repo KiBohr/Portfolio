@@ -30,7 +30,7 @@ export default function SkillsView() {
           {skills.map((skill) => (
             <motion.li
               key={skill.id}
-              className="flex justify-evenly items-center gap-3 bg-white/30 rounded-xl shadow-sm px-3 py-3 md:px-5 cursor-grab"
+              className="flex justify-evenly items-center gap-3 bg-white/30 rounded-xl shadow-sm px-3 py-3 md:px-5 cursor-drag"
               initial={{ opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}

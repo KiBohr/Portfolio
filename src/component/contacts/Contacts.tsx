@@ -11,7 +11,7 @@ const Contacts = ({img, alt, text} : ContactsProps) => {
 
     return ( 
         <motion.div
-        className="flex items-center justify-between gap-2"
+        className="cursor-copy flex items-center justify-between gap-2"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 1.1 }}
         onClick={() => {

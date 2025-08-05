@@ -12,7 +12,7 @@ const LinkButton = ({link, src, alt, styling} : LinkButtonProps) => {
         target="_blank"
         rel="noopener noreferrer"
         href={link}
-        className="cursor-pointer hover:scale-110 transition-all duration-300">
+        className="cursor-click hover:scale-110 transition-all duration-300">
                 <img
                 src={src} 
                 alt={alt}
