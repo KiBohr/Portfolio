@@ -70,7 +70,7 @@ const Header = () => {
             )}
             
            {/* change the postion of this */}
-            <div className="flex items-center gap-3 justify-center">
+            <div className="flex items-center gap-5 justify-center">
                  
             {/* cv */}
             <motion.a
