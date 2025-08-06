@@ -14,7 +14,7 @@ interface ProjectViewProps{
 
 const ProjectView = ({logo, alt, title, description, info,linkText, link, gif, altGif}:ProjectViewProps) => {
     return ( 
-        <motion.div className="carousel-item w-full flex flex-col md:flex-row-reverse md:items-start items-center gap-2 cursor-all-scroll ">
+        <motion.div className="carousel-item w-full flex flex-col md:flex-row-reverse md:items-start items-center gap-2 cursor-swipe ">
 
                     <div
                     className="flex flex-col items-center md:items-start md:pt-2 md:pl-2">

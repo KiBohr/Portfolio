@@ -3,14 +3,18 @@ import PointerIcon from "../../assets/cursor/cursor_point.svg?react";
 import ClickIcon from "../../assets/cursor/cursor_1_click.svg?react";
 import DragIcon from "../../assets/cursor/cursor_1_drag.svg?react";
 import CopyIcon from "../../assets/cursor/cursor_1_copy.svg?react";
+import BackIcon from "../../assets/cursor/cursor_back.svg?react";
+import SwipeIcon from "../../assets/cursor/cursor_swipe.svg?react";
 
-type CursorType = "pointer" | "click" | "drag" | "copy";
+type CursorType = "pointer" | "click" | "drag" | "copy" | "back" | "swipe";
 
 const cursorMap: Record<CursorType, string> = {
   pointer: "cursor-pointer",
   click: "cursor-pointer",
   drag: "cursor-grab",
   copy: "cursor-copy",
+  back: "cursor-back",
+  swipe: "cursor-swipe",
 };
 
 const CustomCursor = () => {
@@ -38,6 +42,10 @@ const CustomCursor = () => {
         setCursorType("drag");
       } else if (target?.closest(".cursor-copy")) {
         setCursorType("copy");
+      } else if (target?.closest(".cursor-back")) {
+        setCursorType("back");
+      } else if (target?.closest(".cursor-swipe")) {
+        setCursorType("swipe");
       } else {
         setCursorType("pointer");
       }
@@ -77,6 +85,10 @@ const CustomCursor = () => {
         return <DragIcon style={style} />;
       case "copy":
         return <CopyIcon style={style} />;
+      case "back":
+        return <BackIcon style={style} />;
+      case "swipe":
+        return <SwipeIcon style={style} />;
       default:
         return <PointerIcon style={style} />;
     }

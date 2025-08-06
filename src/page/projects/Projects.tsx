@@ -95,7 +95,7 @@ const Projects = () => {
                     <motion.img
                         src="/img/collapsable.svg"
                         alt="arrow to the right"
-                        className="h-4 md:h-7 rotate-90 opacity-50 hover:opacity-100 hover:scale-110 cursor-pointer">
+                        className="h-4 md:h-7 rotate-90 opacity-50 hover:opacity-100 hover:scale-110 cursor-click">
                     </motion.img>
                 </button>
             )}
@@ -164,7 +164,7 @@ const Projects = () => {
                 <motion.img
                     src="/img/collapsable.svg"
                     alt="arrow to the right"
-                    className="h-4 md:h-7 rotate-270 opacity-50 hover:opacity-100 hover:scale-110 cursor-pointer">
+                    className="h-4 md:h-7 rotate-270 opacity-50 hover:opacity-100 hover:scale-110 cursor-click">
                 </motion.img>
               </button>
             )}
