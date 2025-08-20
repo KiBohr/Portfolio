@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <motion.section
-      className="flex flex-col items-center justify-center max-w-full gap-10  md:flex-row md:text-6xl md:gap-15  lg:text-8xl lg:gap-25 h-full w-full"
+      className="flex flex-col items-center justify-center max-w-full gap-10  md:flex-row md:text-6xl md:gap-15 mt-10 md:mt-0  lg:text-8xl lg:gap-25 h-full w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
