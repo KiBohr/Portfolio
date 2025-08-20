@@ -51,7 +51,7 @@ const Header = () => {
       
 
     return ( 
-        <header className="flex items-center justify-between gap-4 mx-2 mb-5  md:mx-5 md:mb-10 ">
+        <header className="flex items-center justify-between gap-4 mx-2 mb-5 md:mx-5 md:mb-10 ">
             {!isHomePage && (
                 <Link 
             to="/">
