@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import {useTranslation } from 'react-i18next'
 
 const Projects = () => {
+    console.log("I love to start working on new projects and starting from scratch with my design and vision in mind. Learning to read code from others and get to know code thats not mine is something I am geting better at. I find the possibilities of coding and what one can create with not much is absolutely fascinating. I am looking forward to create amazing projects in a team soon.")
 
     const {t, i18n } = useTranslation();
     const lang = i18n.resolvedLanguage || "en";

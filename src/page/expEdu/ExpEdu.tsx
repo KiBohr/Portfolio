@@ -6,6 +6,8 @@ import {useTranslation } from 'react-i18next'
 
 const ExpEdu = () => {
 
+    console.log(" I see you made it to my Experience and Education page. Welcome ;) I know it looks quiet blank right now, but maybe you have the power to change that ;D I would love to add your company name right in the corner there. Wouldn´t that be awesome?")
+
     const { t } = useTranslation()
     const { i18n } = useTranslation();
     const lang = i18n.resolvedLanguage || "en";

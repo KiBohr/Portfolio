@@ -84,7 +84,9 @@ const Header = () => {
                 dragElastic={0.15}
                 animate={controls}
                 initial={{ y: -300, opacity: 0 }}
-                onDragEnd={handleDragEnd}
+                onDragEnd={() => { handleDragEnd(); console.log("Hehe, fun isnt it?"); }}
+                onHoverStart={() => console.log("You can throw this Cv :)")}
+                onDragStart={()=> console.log("Yes, throw it!")}
                 style={{ display: "inline-block", cursor: isDraggable ? "grab" : "auto" }}
                 >
                 <motion.img

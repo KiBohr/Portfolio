@@ -12,6 +12,7 @@ interface ISkillsViewProps {
 
 
 export default function SkillsView({skills} :ISkillsViewProps) {
+  console.log("Hi there, nice to see you checking out my skills! I find learning new things very exciting, especially considering how much more there is to see for someone new to coding, like me. Let me know what language,library, framework or tool you think I should learn next. See you in my contact section ;)")
   
   return (
     <div className="max-w-xs mx-auto md:mb-15  md:max-w-lg lg:max-w-3xl mb-5">

@@ -4,6 +4,7 @@ import {Trans, useTranslation } from 'react-i18next'
 
 
 const AboutMe = () => {
+    console.log("Moin, as a person from Hamburg would say :) There is much more to say about me, obviously. If you are interested in getting to know me better, just contact me. I would love to connect with you. Enjoy the rest of my portfolio :)")
     const { t } = useTranslation()
     const { i18n } = useTranslation();
     const lang = i18n.resolvedLanguage || "en";

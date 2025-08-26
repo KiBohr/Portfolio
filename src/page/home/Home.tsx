@@ -5,6 +5,7 @@ import SplashScreen from "@/component/splashScreen/SplashScreen";
 import NavHome from "@/component/navHome/NavHome";
 
 const Home = () => {
+  console.log("Welcome to my portfolio :) I hope you are enjyoing the colors and vibes and have fun with the little shananigans I implemented. Nothing crazy, promise :) Btw which Cv design do you prefer? I am curious :D Have fun on my page and leave me feedback if you like :) Eager to learn here. Greetings, Kiwi")
   const [loading, setLoading] = useState<boolean>(() => {
     // Prüfen, ob Splashscreen schon angezeigt wurde
     const hasVisited = sessionStorage.getItem("hasVisited");

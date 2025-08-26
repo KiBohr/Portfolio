@@ -5,6 +5,7 @@ import { motion} from "motion/react";
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 
 const Connect = () => {
+    console.log("Here we are. This is the Connect page. So happy to see you here. I hope you checked out my GitHub and LinkedIn and are maybe already about to send me an email or text or consider me for the job I applied for. Would be very cool. Just saying :) Either way, check out the other stuff here, if you havven´t already and enjoy your stay. Have a good one :)")
     const {t} = useTranslation()
     const { i18n } = useTranslation();
     const lang = i18n.resolvedLanguage || "en";
