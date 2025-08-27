@@ -12,7 +12,7 @@ const Connect = () => {
 
     return ( 
         <motion.section
-        className="flex flex-col gap-3 items-center justify-center  w-full mt-10"
+        className="flex flex-col gap-3 items-center justify-center w-full mt-10"
         initial={{ rotateY: 90, opacity: 0 }}
         animate={{ rotateY: 0, opacity: 1 }}
         exit={{ rotateY: -90, opacity: 0 }}
