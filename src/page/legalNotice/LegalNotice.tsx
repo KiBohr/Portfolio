@@ -1,4 +1,3 @@
-import Contacts from "@/component/contacts/Contacts";
 import HeaderTitle from "@/component/headerTitle/HeaderTitle";
 import { easeInOut, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
