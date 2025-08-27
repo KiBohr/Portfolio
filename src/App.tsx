@@ -7,6 +7,7 @@ import SkillsTech from "./page/skillsTech/SkillsTech"
 import ExpEdu from "./page/expEdu/ExpEdu"
 import Projects from "./page/projects/Projects"
 import Connect from "./page/connect/Connect"
+import LegalNotice from "./page/legalNotice/LegalNotice"
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="exp&edu" element={<ExpEdu/>}/>
         <Route path="projects" element={<Projects/>}/>
         <Route path="contact" element={<Connect/>}/>
+        <Route path="legalNotice" element={<LegalNotice/>}/>
       </Route>
     )
   )

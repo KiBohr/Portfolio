@@ -45,6 +45,15 @@
 
      
 
-     "cv" : "Do you want to download my Cv?"
+     "cv" : "Do you want to download my Cv?",
+
+     "legalNoticeInfo" : "Information according to § 5 German Telemedia Act (TMG):",
+
+     "owner" : "owner:",
+     "country": "Germany",
+     "contacts" : "contact:",
+     "responsible" : "Responsible for content according to § 55 (2) RStV:"
+
+
 }
   

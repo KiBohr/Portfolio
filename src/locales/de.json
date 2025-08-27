@@ -46,7 +46,13 @@
 
      
 
-     "cv" : "Möchten Sie meinen Lebenslauf herunterladen?"
+     "cv" : "Möchten Sie meinen Lebenslauf herunterladen?",
+
+     "legalNoticeInfo" : "Angaben gemäß § 5 TMG:",
+     "owner" : "Inhaber*in:",
+     "country" : "Deutschland",
+     "contacts" : "kontakt:",
+     "responsible" : "Verantwortlich für den Inhalt nach § 55 (2) RStV:"
 
   }
   

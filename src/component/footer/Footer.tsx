@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LinkButton from "../linkButton/LinkButton";
 import { motion } from "framer-motion";
 
@@ -32,12 +32,15 @@ const Footer = () => {
                     />
                 </div>
             </div>}
-           
 
-            <div className="flex items-center justify-center gap-3 fixed bottom-5 left-0  md:justify-start md:left-5">
+            <Link 
+            to="legalNotice"
+            className="flex items-center justify-center gap-3 fixed bottom-5 left-5  md:justify-start md:left-5 cursor-click"
+            >
                 <p className="text-[0.6rem] text-red/70  ">design & code by</p>
                 <p className="text-[0.7rem] text-green  ">K Bohr</p>
-            </div>
+            </Link>
+           
 
             </motion.footer>
      );
