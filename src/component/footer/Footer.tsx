@@ -28,7 +28,7 @@ const Footer = () => {
             </div>}
             
 
-            <div className="flex items-center justify-center gap-3 fixed bottom-5 left-0 w-full md:justify-start md:left-5">
+            <div className="flex items-center justify-center gap-3 fixed bottom-5 left-0  md:justify-start md:left-5">
                 <p className="text-[0.6rem] text-red/70  ">design & code by</p>
                 <p className="text-[0.7rem] text-green  ">K Bohr</p>
             </div>
